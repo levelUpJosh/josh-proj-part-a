@@ -1,13 +1,13 @@
 <head>
     <?php 
-    $pageTitle = "Dashboard";
+    $pageTitle = "Operator Dashboard";
     include "commonPHP/head.php";
     ?>
 </head>
 <body>
     <div class="container-fluid vh-100 d-flex flex-column">
         <div class="row bg-dark text-light text-center">
-            <h1>Make-It-All Helpdesk </h1>
+            <h1>Make-It-All Helpdesk - Operator</h1>
         </div>
         <div class="row flex-grow-1">
         <!-- <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#sideMenu" aria-expanded="false" aria-controls="sideMenu">

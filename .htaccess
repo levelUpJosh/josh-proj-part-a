@@ -1,0 +1,18 @@
+ErrorDocument 404 /errors/404.php
+ErrorDocument 403 /errors/404.php
+
+# Run Php without filename extension
+RewriteEngine on
+RewriteBase /
+RewriteRule ^(.+)\.php$ /$1 [R,L]
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*?)/?$ /$1.php [NC,END]
+
+#redirect directory access requests to error404
+RewriteRule ^directory/ - [L,R=404]
+
+
+DirectoryIndex login.php
+
+# Disable directory browsing 
+Options -Indexes

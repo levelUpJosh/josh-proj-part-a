@@ -1,6 +1,7 @@
 <head>
     <?php 
     $pageTitle = "Operator Dashboard";
+    $dashContent = htmlspecialchars($_GET["content"]); # use this to set what section should be shown
     include "commonPHP/head.php";
     ?>
 </head>
@@ -18,10 +19,10 @@
                 <div class="position-sticky w-auto">
                     <ul class="nav flex-column">
                         <h4 class="sidebar-heading text-center align-items-center px-3 mt-3 mb-3 text-muted">Lookup</h4>
-                        <li class="nav-item btn btn-outline-primary mb-1">Employee Lookup</li>
-                        <li class="nav-item btn btn-outline-primary mb-1">Hardware Lookup</li>
-                        <li class="nav-item btn btn-outline-primary mb-1">Software Lookup</li>
-                        <li class="nav-item btn btn-outline-primary mb-1">Specialist Lookup</li>
+                        <li onclick="location.reload()" class="nav-item btn btn-outline-primary mb-1">Employee Lookup</li>
+                        <li onclick="location.reload()" class="nav-item btn btn-outline-primary mb-1">Hardware Lookup</li>
+                        <li onclick="location.reload()" class="nav-item btn btn-outline-primary mb-1">Software Lookup</li>
+                        <li onclick="location.reload()" class="nav-item btn btn-outline-primary mb-1">Specialist Lookup</li>
 
                         <h4 class="sidebar-heading text-center align-items-center px-3 mt-3 mb-3 text-muted">Logs</h4>
                         <li class="nav-item btn btn-outline-primary mb-1">Problem Log</li>
@@ -31,7 +32,9 @@
 
             </nav>
             <div class="container-fluid flex-fill  col-md-8" id="dashContent">
-    hello
+                <?php 
+                include "dash-content/".$dashContent.".php"
+                ?>
             </div>
             <!-- <ul class="nav flex-column border">
                 <li class="nav-item">

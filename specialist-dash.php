@@ -11,7 +11,7 @@
         </div>
         <div class="row flex-grow-1">
         
-            <div class="col-12 col-md-4 col-lg-2">
+            <div class="col-md-4 col-lg-2">
                 <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#sideMenu" aria-expanded="false" aria-controls="sideMenu">
                     Button that hides the sidebar
                 </button>

@@ -33,7 +33,8 @@
             </nav>
             <div class="container-fluid flex-fill  col-md-8" id="dashContent">
                 <?php 
-                include "dash-content/".$dashContent.".php"
+                include "dash-content/".$dashContent.".php";
+                isset($GET["content"]) ? include "dash-content/".$dashContent.".php" : "did not find content"; # is content variable set? if so include that panel.
                 ?>
             </div>
             <!-- <ul class="nav flex-column border">

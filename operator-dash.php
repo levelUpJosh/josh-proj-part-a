@@ -2,6 +2,7 @@
     <?php 
     $pageTitle = "Operator Dashboard";
     $dashContent = htmlspecialchars($_GET["content"]); # use this to set what section should be shown
+    echo $dashContent;
     include "commonPHP/head.php";
     ?>
 </head>
@@ -19,22 +20,24 @@
                 <div class="position-sticky fixed-top w-auto">
                     <ul class="nav flex-column">
                         <!-- Need to work out how best to navigate between panels which are currently accessed through ?content= in the URL -->
+                        <h4 class="sidebar-heading text-center align-items-center px-3 mt-3 mb-3 text-muted">Logs</h4>
+                        <li class="nav-item btn btn-outline-primary mb-1">Problems</li>
+                        <li class="nav-item btn btn-outline-primary mb-1">Calls</li>
+                        
                         <h4 class="sidebar-heading text-center align-items-center px-3 mt-3 mb-3 text-muted">Databases</h4>
                         <li onclick="location.reload()" class="nav-item btn btn-outline-primary mb-1">Employee</li>
                         <li onclick="location.reload()" class="nav-item btn btn-outline-primary mb-1">Hardware</li>
                         <li onclick="location.reload()" class="nav-item btn btn-outline-primary mb-1">Software</li>
                         <li onclick="location.reload()" class="nav-item btn btn-outline-primary mb-1">Specialist</li>
 
-                        <h4 class="sidebar-heading text-center align-items-center px-3 mt-3 mb-3 text-muted">Logs</h4>
-                        <li class="nav-item btn btn-outline-primary mb-1">Problems</li>
-                        <li class="nav-item btn btn-outline-primary mb-1">Calls</li>
+                        
                         <br>
                         <button type="button" class="btn btn-primary d-none d-md-inline-block" id="topBtn" onclick="topFunction()">Return to Top</button>
                     </ul>
                 </div>
 
             </nav>
-            <div class="container-fluid flex-fill overflo-auto m-1 col-md-7" id="dashContent">
+            <div class="container-fluid flex-fill overflow-auto m-1 col-md-7" id="dashContent">
                 <?php 
                 # import the selected panel
                 include "dash-content/".$dashContent.".php";

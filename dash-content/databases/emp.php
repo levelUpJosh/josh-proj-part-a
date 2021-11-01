@@ -1,3 +1,97 @@
+<!-- Modal -->
+<div class="modal fade" id="empModal" tabindex="-1" aria-labelledby="empModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="empModalLabel">Employee Info</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+	  <h3>Details</h3>
+        <table class="table">
+			<form>
+				<tr>
+					<td>ID:</td>
+					<td>1</td>
+				</tr>
+
+				<tr>
+					<td><label for="fname-modal-field">Employee: </label></td>
+					<td><input type="text" name="fname-modal-field" value="Melanie"></td>
+				</tr>
+				
+				<tr>
+					<td><label for="lname-modal-field">Model: </label></td>
+					<td><input type="text" name="lname-modal-field" value="Marquez"></td>
+				</tr>
+				
+				<tr>
+					<td><label for="dept-modal-field">Version: </label></td>
+					<td><input type="text" name="dept-modal-field" value="Dictum???"></td>
+				</tr>
+				
+				
+				<tr>
+					<td><label for="phone-modal-field">Phone: </label></td>
+					<td><input type="text" name="phone-modal-field" value="(01825) 767371"></td>
+				</tr>
+
+				<tr>
+					<td><button type="button" class="btn btn-primary">Save changes</button></td>
+				</tr>
+			</form>
+		</table>
+		<h3>Problem History</h3>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<td scope="col">Problem ID</td>
+					<td scope="col">Notes</td>
+					<td scope="col">Solved?</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="bg-danger text-white">
+					<td>3</td>
+					<td>Example</td>
+					<td>Unsolved</td>
+				</tr>
+				<tr class="bg-success text-white">
+					<td>4</td>
+					<td>Example2</td>
+					<td>Solved</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h3>Call History</h3>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<td scope="col">Problem ID</td>
+					<td scope="col">Notes</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>3</td>
+					<td>Example</td>
+				</tr>
+			</tbody>
+		</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 <div class="position-sticky fixed-top row bg-light">
 	<div>
 		<label for="emp-search">Enter Search Query: </label>
@@ -6,7 +100,7 @@
 	</div>
 
 </div>
-<table class="table" id="emp-table">
+<table class="table" id="add-emp-table">
 	<thead>
 		<th scope="col">Employee ID</th>
 		<th scope="col">First Name</th>
@@ -33,6 +127,7 @@
 		<th scope="col">Last Name</th>
 		<th scope="col">Department</th>
 		<th scope="col">Phone Number</th>
+		<th scope="col">Details</th>
 	</thead>
 	<tbody>
 		<tr>
@@ -41,6 +136,7 @@
 			<td>Marquez</td>
 			<td>Dictum Mi Ac Foundation</td>
 			<td>(01825) 767371</td>
+			<td><button data-bs-toggle="modal" data-bs-target="#empModal" class="btn btn-secondary">Details</button></td>
 		</tr>
 		<tr>
 			<td>2</td>

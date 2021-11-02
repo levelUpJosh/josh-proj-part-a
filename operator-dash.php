@@ -31,14 +31,14 @@
                     <ul class="nav flex-column">
                         <!-- Need to work out how best to navigate between panels which are currently accessed through ?content= in the URL -->
                         <h4 class="sidebar-heading text-center align-items-center px-3 mt-3 mb-3 text-muted">Logs</h4>
-                        <li class="nav-item btn btn-outline-primary mb-1" onclick="location.replace('/operator-dash?content=logs/problems');">Problems</li>
-                        <li class="nav-item btn btn-outline-primary mb-1" onclick="location.replace('/operator-dash?content=logs/calls');">Calls</li>
+                        <li class="nav-item btn btn-outline-primary mb-1 <?php if($dashContent == 'logs/problems'){echo 'disabled';};?>" onclick="location.replace('/operator-dash?content=logs/problems');">Problems</li>
+                        <li class="nav-item btn btn-outline-primary mb-1 <?php if($dashContent == 'logs/calls'){echo 'disabled';};?>" onclick="location.replace('/operator-dash?content=logs/calls');">Calls</li>
 
                         <h4 class="sidebar-heading text-center align-items-center px-3 mt-3 mb-3 text-muted">Databases</h4>
-                        <li onclick="location.replace('/operator-dash?content=databases/emp');" class="nav-item btn btn-outline-primary mb-1">Employee</li>
-                        <li onclick="location.replace('/operator-dash?content=databases/hardware');" class="nav-item btn btn-outline-primary mb-1">Hardware</li>
-                        <li onclick="location.replace('/operator-dash?content=databases/software');" class="nav-item btn btn-outline-primary mb-1">Software</li>
-                        <li onclick="location.replace('/operator-dash?content=databases/specialists');" class="nav-item btn btn-outline-primary mb-1">Specialist</li>
+                        <li onclick="location.replace('/operator-dash?content=databases/emp');" class="nav-item btn btn-outline-primary mb-1 <?php if($dashContent == 'databases/emp'){echo 'disabled';};?>">Employee</li>
+                        <li onclick="location.replace('/operator-dash?content=databases/hardware');" class="nav-item btn btn-outline-primary mb-1 <?php if($dashContent == 'databases/hardware'){echo 'disabled';};?>">Hardware</li>
+                        <li onclick="location.replace('/operator-dash?content=databases/software');" class="nav-item btn btn-outline-primary mb-1 <?php if($dashContent == 'databases/software'){echo 'disabled';};?>">Software</li>
+                        <li onclick="location.replace('/operator-dash?content=databases/specialists');" class="nav-item btn btn-outline-primary mb-1 <?php if($dashContent == 'databases/specialists'){echo 'disabled';};?>">Specialist</li>
 
 
                         <br>

@@ -100,12 +100,11 @@
 </div>
 <table class="table" id="add-spec-table">
 	<thead>
-		<th scope="col">Hardware ID</th>
-		<th scope="col">Manufacturer</th>
-		<th scope="col">Model</th>
-		<th scope="col">Version</th>
-		<th scope="col">Warranty Status</th>
-		<th scope="col">Warranty Expires</th>
+		<th scope="col">Specialist ID</th>
+		<th scope="col">Username</th>
+		<th scope="col">Name</th>
+		<th scope="col">Skillset</th>
+		<th scope="col">Number of Problems (30days)</th>
 	</thead>
 	<tbody>
 		<tr id="add-employee-row" class="table-dark">
@@ -114,7 +113,6 @@
 			<td><input type="text"></td>
 			<td><input type="text"></td>
 			<td><input type="text"></td>
-			<td><input type="date"></td>
 		</tr>
 		<td><button>Submit</button></td>
 	</tbody>
@@ -122,41 +120,20 @@
 
 <table class="table" id="spec-table">
 	<thead>
-		<th scope="col">Hardware ID</th>
-		<th scope="col">Manufacturer</th>
-		<th scope="col">Model</th>
-		<th scope="col">Version</th>
-		<th scope="col">Warranty Status</th>
-		<th scope="col">Warranty Expires</th>
-		<th scope="col">Details</th>
+		<th scope="col">Specialist ID</th>
+		<th scope="col">Username</th>
+		<th scope="col">Name</th>
+		<th scope="col">Skillset</th>
+		<th scope="col">Number of Problems (30days)</th>
 	</thead>
 	<tbody>
 		<tr>
 			<td>1</td>
-			<td>Apple</td>
-			<td>Macbook Pro</td>
-			<td>15in i7 2019</td>
-			<td>Yes</td>
-			<td>02/2022</td>
-			<td><button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#swModal">View Details</button></td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>Apple</td>
-			<td>Macbook Air</td>
-			<td>11in i3 2018</td>
-			<td>No</td>
+			<td>james</td>
+			<td>James Tell</td>
 			<td></td>
-			<td><button class="btn btn-secondary">View Details</button></td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>Microsoft</td>
-			<td>Surface Pro</td>
-			<td>8</td>
-			<td>Yes</td>
-			<td>10/2024</td>
-			<td><button class="btn btn-secondary">View Details</button></td>
+			<td>2</td>
+			<td><button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#swModal">View Details</button></td>
 		</tr>
 	</tbody>
 

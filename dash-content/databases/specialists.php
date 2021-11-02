@@ -2,7 +2,7 @@
 -> I may choose to use "cards" for each specialist, rather than a table
 
 
-<!-- Modal -->
+<!-- Edit Modal -->
 <div class="modal fade" id="swModal" tabindex="-1" aria-labelledby="swModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">

@@ -1,4 +1,55 @@
-<!-- Modal -->
+<!-- Add Modal -->
+<div class="modal fade" id="empAddModal" tabindex="-1" aria-labelledby="empAddModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="empModalLabel">Add Employee Info</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+	  <h3>Details</h3>
+        <table class="table">
+			<form>
+				<tr>
+					<td>ID:</td>
+					<td>1</td>
+				</tr>
+
+				<tr>
+					<td><label for="fname-modal-field">Employee: </label></td>
+					<td><input type="text" name="fname-modal-field" value=""></td>
+				</tr>
+				
+				<tr>
+					<td><label for="lname-modal-field">Model: </label></td>
+					<td><input type="text" name="lname-modal-field" value=""></td>
+				</tr>
+				
+				<tr>
+					<td><label for="dept-modal-field">Version: </label></td>
+					<td><input type="text" name="dept-modal-field" value=""></td>
+				</tr>
+				
+				
+				<tr>
+					<td><label for="phone-modal-field">Phone: </label></td>
+					<td><input type="text" name="phone-modal-field" value=""></td>
+				</tr>
+
+				<tr>
+					<td><button type="button" class="btn btn-primary">Save changes</button></td>
+				</tr>
+			</form>
+		</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Modal -->
 <div class="modal fade" id="empModal" tabindex="-1" aria-labelledby="empModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -99,7 +150,7 @@
 	<div>
 		<label for="emp-search">Enter Search Query: </label>
 		<input type="text" id="emp-search" onkeyup="searchTable()" placeholder="Search">
-		<button type="button" class="btn btn-primary col-2 float-right m-3">Add New Employee</button>
+		<button type="button" data-bs-toggle="modal" data-bs-target="#empAddModal" class="btn btn-primary col-2 float-right m-3">Add New Employee</button>
 	</div>
 
 </div>

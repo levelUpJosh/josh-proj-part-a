@@ -84,13 +84,13 @@
 
 <div class="position-sticky fixed-top row bg-light">
 	<div>
-		<label for="hw-search">Enter Search Query: </label>
-		<input type="text" id="hw-search" onkeyup="searchTable()" placeholder="Search">
+		<label for="sw-search">Enter Search Query: </label>
+		<input type="text" id="sw-search" onkeyup="searchTable()" placeholder="Search">
 		<button type="button" class="btn btn-primary col-2 float-right m-3">Add New Hardware</button>
 	</div>
 
 </div>
-<table class="table" id="add-hw-table">
+<table class="table" id="add-sw-table">
 	<thead>
 		<th scope="col">Hardware ID</th>
 		<th scope="col">Manufacturer</th>
@@ -112,7 +112,7 @@
 	</tbody>
 </table>
 
-<table class="table" id="hw-table">
+<table class="table" id="sw-table">
     <thead>
 		<th scope="col">Hardware ID</th>
 		<th scope="col">Manufacturer</th>
@@ -163,13 +163,13 @@
 		var input, search, table, tr, td, i, txt, count;
 
 		// Find the input text field
-		input = document.getElementById("hw-search");
+		input = document.getElementById("sw-search");
 		//console.log(input);
 		// Retrieve the search from the field
 		search = input.value.toUpperCase();
 
 		// Find the table and all table rows
-		table = document.getElementById("hw-table");
+		table = document.getElementById("sw-table");
 		tr = table.getElementsByTagName("tr");
 
 		// Reset the count of rows to zero

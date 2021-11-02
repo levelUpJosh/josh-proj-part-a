@@ -49,6 +49,7 @@
 					<td scope="col">Problem ID</td>
 					<td scope="col">Notes</td>
 					<td scope="col">Solved?</td>
+					<td scope="col">Details</td>
 				</tr>
 			</thead>
 			<tbody>
@@ -56,11 +57,13 @@
 					<td>3</td>
 					<td>Example</td>
 					<td>Unsolved</td>
+					<td><button class="btn btn-secondary">Info</button></td>
 				</tr>
 				<tr class="bg-success text-white">
 					<td>4</td>
 					<td>Example2</td>
 					<td>Solved</td>
+					<td><button class="btn btn-secondary">Info</button></td>
 				</tr>
 			</tbody>
 		</table>

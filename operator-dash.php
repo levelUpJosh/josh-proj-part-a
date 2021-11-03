@@ -1,7 +1,13 @@
 <head>
     <?php
     $pageTitle = "Operator Dashboard";
-    $dashContent = htmlspecialchars($_GET["content"]); # use this to set what section should be shown
+    
+    if (isset($_GET["content"])){
+        $dashContent = htmlspecialchars($_GET["content"]); # use this to set what section should be shown
+    }else{
+        #default to problems page
+        $dashContent = "logs/problems";
+    }
     echo $dashContent;
     include "commonPHP/head.php";
     ?>

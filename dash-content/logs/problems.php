@@ -16,7 +16,7 @@
                         </tr>
 
                         <tr>
-                            <td><label for="name-modal-field">Priority: </label></td>
+                            <td><label for="name-field">Priority: </label></td>
                             <td><select class="form-select " aria-label="Select priority " id="priority-modal-dropdown">
                                     <option value="High">High</option>
                                     <option value="Medium">Medium</option>
@@ -26,24 +26,24 @@
                         </tr>
 
                         <tr>
-                            <td><label for="hw-id-modal-field">Hardware ID* : </label></td>
-                            <td><input type="text" name="model-field" value=""></td>
+                            <td><label for="hw-id-field">Hardware ID* : </label></td>
+                            <td><input type="text" name="hw-id-field" value=""></td>
                         </tr>
 
                         <tr>
-                            <td><label for="sw-id-modal-field">Software ID (Optional): </label></td>
-                            <td><input type="text" name="version-field" value="01/01/2022"></td>
+                            <td><label for="sw-id-field">Software ID (Optional): </label></td>
+                            <td><input type="text" name="sw-id-field" value=""></td>
                         </tr>
 
 
                         <tr>
-                            <td><label for="user-id-field">Employee ID*: </label></td>
-                            <td><input type="text" value=""></td>
+                            <td><label for="emp-id-field">Employee ID*: </label></td>
+                            <td><input type="text" name="emp-id-field" value=""></td>
                         </tr>
 
                         <tr>
-                            <td><label for="notes-modal-field">Notes: </label></td>
-                            <td><input id="notes-modal" name="notes-modal-field" value="" /></td>
+                            <td><label for="notes-field">Notes: </label></td>
+                            <td><input type="text" name="notes-field" value="" /></td>
 
                         </tr>
                         <tr>
@@ -59,80 +59,165 @@
     </div>
 </div>
 <!-- Edit Modal -->
-<div class="modal fade" id="problemEditModal" tabindex="-1" aria-labelledby="problemEditModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+<div class="modal  fade" id="problemEditModal" tabindex="-1" aria-labelledby="problemEditModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="problemEditModalLabel">Software Info</h5>
+                <h5 class="modal-title" id="problemEditModalLabel">Problem Info</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h3>Details</h3>
-                <table class="table">
-                    <form method="post">
-                        <tr>
-                            <td>ID:</td>
-                            <td>1</td>
-                        </tr>
+                <div class="row">
+                    <div class="card col-6">
+                        <div class="card-body">
+                            <table class="table">
+                                <h3 class="card-title">Details</h3>
+                                <form class="card-text" method="post">
+                                    <tr>
+                                        <td>ID:</td>
+                                        <td></td>
+                                    </tr>
 
-                        <tr>
-                            <td><label for="name-modal-field">Name: </label></td>
-                            <td><input type="text" name="manufacturer-field" value="Microsoft Office 365 Entreprise" required></td>
-                        </tr>
+                                    <tr>
+                                        <td><label for="name-field">Priority: </label></td>
+                                        <td><select class="form-select " aria-label="Select priority " id="priority-modal-dropdown">
+                                                <option value="High">High</option>
+                                                <option value="Medium">Medium</option>
+                                                <option selected value="Low">Low</option>
+                                            </select></td>
 
-                        <tr>
-                            <td><label for="license-start-modal-field">License Start: </label></td>
-                            <td><input type="date" name="model-field" value="2021-01-01"></td>
-                        </tr>
+                                    </tr>
 
-                        <tr>
-                            <td><label for="license-end-modal-field">License End: </label></td>
-                            <td><input type="date" name="version-field" value="2022-01-01"></td>
-                        </tr>
+                                    <tr>
+                                        <td><label for="hw-id-field">Hardware ID* : </label></td>
+                                        <td><input type="text" name="hw-id-field" value=""></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><label for="sw-id-field">Software ID (Optional): </label></td>
+                                        <td><input type="text" name="sw-id-field" value=""></td>
+                                    </tr>
 
 
-                        <tr>
-                            <td><label for="key-modal-field">Product Key: </label></td>
-                            <td><input type="text" value="AA9-08B-778-90T7"></td>
-                        </tr>
+                                    <tr>
+                                        <td><label for="emp-id-field">Employee ID*: </label></td>
+                                        <td><input type="text" name="emp-id-field" value=""></td>
+                                    </tr>
 
-                        <tr>
-                            <td><label for="os-modal-field">Operating System: </label></td>
-                            <td><input list="os-modal-dropdown" id="os-choice" name="os-modal-field" value="Windows" /></td>
-                            <datalist id="os-modal-dropdown">
-                                <option value="MacOS">
-                                <option value="Windows">
-                                <option value="Linux">
-                                <option value="iOS">
-                                <option value="Android">
-                            </datalist>
-                        </tr>
-                        <tr>
-                            <td><label for="house-modal-field">Developed in house?: </label></td>
-                            <td><input type="checkbox" checked></td>
-                        </tr>
-                        <tr>
-                            <td><button type="submit" class="btn btn-primary">Save changes</button></td>
-                        </tr>
-                    </form>
-                </table>
-                <h3>Problem History</h3>
+                                    <tr>
+                                        <td><label for="notes-field">Notes: </label></td>
+                                        <td><input type="text" name="notes-field" value="" /></td>
 
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <td scope="col">Problem ID</td>
-                            <td scope="col">Notes</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>3</td>
-                            <td>Example</td>
-                        </tr>
-                    </tbody>
-                </table>
+                                    </tr>
 
+                                    <tr>
+                                        <td><label for="name-field">Problem Type: </label></td>
+                                        <td><select class="form-select " aria-label="Select priority " id="priority-modal-dropdown">
+                                                <option>Hardware</option>
+                                                <option>Software</option>
+                                                <option>Networking</option>
+                                            </select></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><label for="solved-field">Solved: </label></td>
+                                        <td><select class="form-select " type="text" name="solved-field" value="">
+                                                <option class="bg-danger text-light">Unresolved</option>
+                                                <option class="bg-success text-dark">Resolved</option>
+                                            </select>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><button type="submit" class="btn btn-primary">Save changes</button></td>
+                                    </tr>
+                                </form>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row col-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Hardware Affected</h3>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <td scope="col">Hardware ID</td>
+                                            <td scope="col">Manufacturer</td>
+                                            <td scope="col">Model</td>
+                                            <td scope="col">Version</td>
+                                            <td scope="col">Details</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Apple</td>
+                                            <td>Macbook Pro</td>
+                                            <td>15in i7 2019</td>
+                                            <td><button class="btn btn-secondary">View</button>
+                                            <td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Software</h3>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <td scope="col">Call ID</td>
+                                            <td scope="col">Caller Name</td>
+                                            <td scope="col">Caller Name</td>
+                                            <td scope="col">Details</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Example</td>
+                                            <td></td>
+
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Call History</h3>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <td scope="col">Call ID</td>
+                                            <td scope="col">Caller Name</td>
+                                            <td scope="col">Caller Name</td>
+                                            <td scope="col">Details</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Example</td>
+                                            <td></td>
+
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <button class="col-4 btn btn-primary">Add New</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -149,7 +234,7 @@
     </div>
 
 </div>
-<table class="table" id="add-problem-table">
+<!-- <table class="table" id="add-problem-table">
     <thead>
         <th scope="col">Problem ID</th>
         <th scope="col">Priority</th>
@@ -169,7 +254,7 @@
             <td><button class="btn btn-primary">Submit</button></td>
         </tr>
     </tbody>
-</table>
+</table> -->
 
 <table class="table" id="problem-table">
     <thead>
@@ -192,13 +277,29 @@
             <td><button class="btn btn-outline-primary">1</button></td>
             <td>Hello</td>
             <td>To say hello</td>
-            <td><button class="btn btn-secondary">View Details</button></td>
+            <td><button data-bs-toggle="modal" data-bs-target="#problemEditModal" class="btn btn-secondary">View/Edit</button></td>
         </tr>
     </tbody>
 
 </table>
 
 <script>
+    function setPriorityColours() {
+        // Find the table and all table rows
+        table = document.getElementById("problem-table");
+        tr = table.getElementsByTagName("tr");
+        var priority;
+
+        for (row = 0; row < tr.length; row++) {
+            console.log(tr[row]);
+            priority = tr[row].getElementsByTagName("td");
+            console.log(priority);
+            if (priority.textContent == "H") {
+                tr[row].classList.add("bg-danger");
+            }
+        }
+    }
+
     function searchTable() {
         // Allows text to be entered in the search box to find in the table.
         // Does not involve searching the database again therefore reduces security risk of SQL injection.
@@ -206,8 +307,10 @@
         // Set the variables
         var input, search, table, tr, td, i, txt, count;
 
+        setPriorityColours();
+
         // Find the input text field
-        input = document.getElementById("call-search");
+        input = document.getElementById("problem-search");
         //console.log(input);
         // Retrieve the search from the field
         search = input.value.toUpperCase();

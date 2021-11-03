@@ -67,9 +67,12 @@
             </nav>
             <div class="container-fluid flex-fill overflow-auto m-1 col-md-7" id="dashContent">
                 <?php
-                # import the selected panel
-                include "dash-content/" . $dashContent . ".php";
-                isset($GET["content"]) ? include "dash-content/" . $dashContent . ".php" : "did not find content"; # is content variable set? if so include that panel.
+                if (file_exists("dash-content/" . $dashContent . ".php")) {
+                    # import the selected panel
+                    include "dash-content/" . $dashContent . ".php";
+                } else {
+                    echo "content panel '".$dashContent."' not found";
+                }
                 ?>
             </div>
             <!-- <ul class="nav flex-column border">

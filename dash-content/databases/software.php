@@ -1,84 +1,149 @@
-<!-- Modal -->
-<div class="modal fade" id="swModal" tabindex="-1" aria-labelledby="swModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="swModalLabel">Software Info</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-	  <h3>Details</h3>
-        <table class="table">
-			<form method="post">
-				<tr>
-					<td>ID:</td>
-					<td>1</td>
-				</tr>
+<!-- Add Modal -->
+<div class="modal fade" id="swAddModal" tabindex="-1" aria-labelledby="swAddModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="swAddModalLabel">Add Software</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<h3>Details</h3>
+				<table class="table">
+					<form method="post">
+						<tr>
+							<td>ID:</td>
+							<td></td>
+						</tr>
 
-				<tr>
-					<td><label for="name-modal-field">Name: </label></td>
-					<td><input type="text" name="manufacturer-field" value="Apple" required></td>
-				</tr>
-				
-				<tr>
-					<td><label for="license-start-modal-field">License Start: </label></td>
-					<td><input type="text" name="model-field" value="Macbook Pro"></td>
-				</tr>
-				
-				<tr>
-					<td><label for="license-end-modal-field">License End: </label></td>
-					<td><input type="text" name="version-field" value="15in i7 2019"></td>
-				</tr>
-				
-				
-				<tr>
-					<td><label for="key-modal-field">Product Key: </label></td>
-					<td><input type="text"></td>
-				</tr>
+						<tr>
+							<td><label for="name-modal-field">Name: </label></td>
+							<td><input type="text" name="manufacturer-field" value="" required></td>
+						</tr>
 
-				<tr>
-					<td><label for="os-modal-field">Operating System: </label></td>
-					<td><input list="os-modal-dropdown" id="os-choice" name="os-modal-field" /></td>
-					<datalist id="os-modal-dropdown">
-						<option value="MacOS">
-						<option value="Windows">
-						<option value="Linux">
-						<option value="iOS">
-						<option value="Android">
-					</datalist>
-				</tr>
-				<tr>
-					<td><label for="house-modal-field">Developed in house?: </label></td>
-					<td><input type="checkbox" checked></td>
-				</tr>
-				<tr>
-					<td><button type="submit" class="btn btn-primary">Save changes</button></td>
-				</tr>
-			</form>
-		</table>
-		<h3>Problem History</h3>
+						<tr>
+							<td><label for="license-start-modal-field">License Start: </label></td>
+							<td><input type="date" name="model-field" value=""></td>
+						</tr>
 
-		<table class="table">
-			<thead>
-				<tr>
-					<td scope="col">Problem ID</td>
-					<td scope="col">Notes</td>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>3</td>
-					<td>Example</td>
-				</tr>
-			</tbody>
-		</table>
+						<tr>
+							<td><label for="license-end-modal-field">License End: </label></td>
+							<td><input type="date" name="version-field" value="01/01/2022"></td>
+						</tr>
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
+
+						<tr>
+							<td><label for="key-modal-field">Product Key: </label></td>
+							<td><input type="text" value=""></td>
+						</tr>
+
+						<tr>
+							<td><label for="os-modal-field">Operating System: </label></td>
+							<td><input list="os-modal-dropdown" id="os-choice" name="os-modal-field" value="" /></td>
+							<datalist id="os-modal-dropdown">
+								<option value="MacOS">
+								<option value="Windows">
+								<option value="Linux">
+								<option value="iOS">
+								<option value="Android">
+							</datalist>
+						</tr>
+						<tr>
+							<td><label for="house-modal-field">Developed in house?: </label></td>
+							<td><input type="checkbox"></td>
+						</tr>
+						<tr>
+							<td><button type="submit" class="btn btn-primary">Save changes</button></td>
+						</tr>
+					</form>
+				</table>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Edit Modal -->
+<div class="modal fade" id="swEditModal" tabindex="-1" aria-labelledby="swEditModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="swEditModalLabel">Software Info</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<h3>Details</h3>
+				<table class="table">
+					<form method="post">
+						<tr>
+							<td>ID:</td>
+							<td>1</td>
+						</tr>
+
+						<tr>
+							<td><label for="name-modal-field">Name: </label></td>
+							<td><input type="text" name="manufacturer-field" value="Microsoft Office 365 Entreprise" required></td>
+						</tr>
+
+						<tr>
+							<td><label for="license-start-modal-field">License Start: </label></td>
+							<td><input type="date" name="model-field" value="2021-01-01"></td>
+						</tr>
+
+						<tr>
+							<td><label for="license-end-modal-field">License End: </label></td>
+							<td><input type="date" name="version-field" value="2022-01-01"></td>
+						</tr>
+
+
+						<tr>
+							<td><label for="key-modal-field">Product Key: </label></td>
+							<td><input type="text" value="AA9-08B-778-90T7"></td>
+						</tr>
+
+						<tr>
+							<td><label for="os-modal-field">Operating System: </label></td>
+							<td><input list="os-modal-dropdown" id="os-choice" name="os-modal-field" value="Windows" /></td>
+							<datalist id="os-modal-dropdown">
+								<option value="MacOS">
+								<option value="Windows">
+								<option value="Linux">
+								<option value="iOS">
+								<option value="Android">
+							</datalist>
+						</tr>
+						<tr>
+							<td><label for="house-modal-field">Developed in house?: </label></td>
+							<td><input type="checkbox" checked></td>
+						</tr>
+						<tr>
+							<td><button type="submit" class="btn btn-primary">Save changes</button></td>
+						</tr>
+					</form>
+				</table>
+				<h3>Problem History</h3>
+
+				<table class="table">
+					<thead>
+						<tr>
+							<td scope="col">Problem ID</td>
+							<td scope="col">Notes</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>3</td>
+							<td>Example</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
 </div>
 
 
@@ -86,18 +151,19 @@
 	<div>
 		<label for="sw-search">Enter Search Query: </label>
 		<input type="text" id="sw-search" onkeyup="searchTable()" placeholder="Search">
-		<button type="button" class="btn btn-primary col-2 float-right m-3">Add New Hardware</button>
+		<button type="button" data-bs-toggle="modal" data-bs-target="#swAddModal" class="btn btn-primary col-2 float-right m-3">Add New Software</button>
 	</div>
 
 </div>
 <table class="table" id="add-sw-table">
 	<thead>
-		<th scope="col">Hardware ID</th>
-		<th scope="col">Manufacturer</th>
-		<th scope="col">Model</th>
-		<th scope="col">Version</th>
-		<th scope="col">Warranty Status</th>
-        <th scope="col">Warranty Expires</th>
+		<th scope="col">Software ID</th>
+		<th scope="col">Name</th>
+		<th scope="col">License Start</th>
+		<th scope="col">License End</th>
+		<th scope="col">Key</th>
+		<th scope="col">OS</th>
+		<th scope="col">In house?</th>
 	</thead>
 	<tbody>
 		<tr id="add-employee-row" class="table-dark">
@@ -113,42 +179,45 @@
 </table>
 
 <table class="table" id="sw-table">
-    <thead>
-		<th scope="col">Hardware ID</th>
-		<th scope="col">Manufacturer</th>
-		<th scope="col">Model</th>
-		<th scope="col">Version</th>
-		<th scope="col">Warranty Status</th>
-        <th scope="col">Warranty Expires</th>
-        <th scope="col">Details</th>
+	<thead>
+		<th scope="col">Software ID</th>
+		<th scope="col">Name</th>
+		<th scope="col">License Start</th>
+		<th scope="col">License End</th>
+		<th scope="col">Key</th>
+		<th scope="col">OS</th>
+		<th scope="col">In house?</th>
+		<th scope="col">Details</th>
+
 	</thead>
 	<tbody>
 		<tr>
 			<td>1</td>
-			<td>Apple</td>
-			<td>Macbook Pro</td>
-			<td>15in i7 2019</td>
-			<td>Yes</td>
-            <td>02/2022</td>
-            <td><button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#swModal">View Details</button></td>
+			<td>Microsoft Office 365 Enterprise</td>
+			<td>01/01/2021</td>
+			<td>01/01/2022</td>
+			<td>AA9-08B-778-90T7</td>
+			<td>Windows</td>
+			<td>No</td>
+			<td><button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#swEditModal">View Details</button></td>
 		</tr>
-        <tr>
+		<tr>
 			<td>2</td>
 			<td>Apple</td>
 			<td>Macbook Air</td>
 			<td>11in i3 2018</td>
 			<td>No</td>
-            <td></td>
-            <td><button class="btn btn-secondary">View Details</button></td>
+			<td></td>
+			<td><button class="btn btn-secondary">View Details</button></td>
 		</tr>
-        <tr>
+		<tr>
 			<td>3</td>
 			<td>Microsoft</td>
 			<td>Surface Pro</td>
 			<td>8</td>
 			<td>Yes</td>
-            <td>10/2024</td>
-            <td><button class="btn btn-secondary">View Details</button></td>
+			<td>10/2024</td>
+			<td><button class="btn btn-secondary">View Details</button></td>
 		</tr>
 	</tbody>
 

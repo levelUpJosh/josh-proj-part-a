@@ -1,9 +1,9 @@
 <form class="card">
     <div class="card-body">
         <div class="mb-3 row">
-            <label for="staticEmail" class="col-sm-2 col-form-label">Username</label>
+            <label for="staticEmail" class="col-sm-2 col-form-label">User Type</label>
             <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Alice">
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?php echo $userType?>">
             </div>
         </div>
         <div class="mb-3 row">

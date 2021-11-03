@@ -1,6 +1,7 @@
 <head>
     <?php
     $pageTitle = "Operator Dashboard";
+    $userType = "operator";
     
     if (isset($_GET["content"])){
         $dashContent = htmlspecialchars($_GET["content"]); # use this to set what section should be shown

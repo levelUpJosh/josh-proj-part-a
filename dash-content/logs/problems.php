@@ -122,12 +122,21 @@
                                     <tr>
                                         <td><label for="solved-field">Solved: </label></td>
                                         <td><select class="form-select " type="text" name="solved-field" value="">
-                                                <option class="bg-danger text-light">Unresolved</option>
-                                                <option class="bg-success text-dark">Resolved</option>
+                                                <option id="unresolved-optionclass="bg-danger text-light">Unresolved</option>
+                                                <option id="resolved-option" class="bg-success text-dark">Resolved</option>
                                             </select>
                                         </td>
-
                                     </tr>
+                                    <div id="solution-details-div">
+                                        <tr>
+                                            <td><label for="solution-notes-field">Solution Description:</label></td>
+                                            <td><textarea name="solution-notes-field"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="solution-owner-field">Solved by:</label></td>
+                                            <td><select class="form-select " name="solution-owner-field"></select></td>
+                                        </tr>
+                                    </div>
                                     <tr>
                                         <td><button type="submit" class="btn btn-primary">Save changes</button></td>
                                     </tr>
@@ -299,6 +308,8 @@
             }
         }
     }
+
+
 
     function searchTable() {
         // Allows text to be entered in the search box to find in the table.

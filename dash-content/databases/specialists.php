@@ -140,6 +140,9 @@
 </table>
 
 <script>
+	if ("<?php echo $userType?>" != 'operator') {
+		window.location.replace('/errors/404'); // no unauthorised access
+	}
 	function searchTable() {
 		// Allows text to be entered in the search box to find in the table.
 		// Does not involve searching the database again therefore reduces security risk of SQL injection.

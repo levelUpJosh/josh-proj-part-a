@@ -45,9 +45,6 @@
                         <li onclick="location.replace('/<?php echo $userType ?>-dash?content=databases/software');" class="nav-item btn btn-outline-primary mb-1 <?php if ($dashContent == 'databases/software') {
                                                                                                                                                         echo 'disabled';
                                                                                                                                                     }; ?>">Software</li>
-                        <li onclick="location.replace('/<?php echo $userType ?>-dash?content=databases/specialists');" class="nav-item btn btn-outline-primary mb-1 <?php if ($dashContent == 'databases/specialists') {
-                                                                                                                                                            echo 'disabled';
-                                                                                                                                                        }; ?>">Specialist</li>
                         <br>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -55,7 +52,6 @@
                             </a>
                             <ul class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" onclick="location.replace('/<?php echo $userType ?>-dash?content=user-settings/change-password');">Change Password</a></li>
-                                <li><a class="dropdown-item" onclick="location.replace('/<?php echo $userType ?>-dash?content=user-settings/backups');">Manage Backups</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>

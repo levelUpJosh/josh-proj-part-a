@@ -16,17 +16,17 @@
 				</tr>
 
 				<tr>
-					<td><label for="fname-modal-field">Employee: </label></td>
+					<td><label for="fname-modal-field">First Name: </label></td>
 					<td><input type="text" name="fname-modal-field" value=""></td>
 				</tr>
 				
 				<tr>
-					<td><label for="lname-modal-field">Model: </label></td>
+					<td><label for="lname-modal-field">Last Name: </label></td>
 					<td><input type="text" name="lname-modal-field" value=""></td>
 				</tr>
 				
 				<tr>
-					<td><label for="dept-modal-field">Version: </label></td>
+					<td><label for="dept-modal-field">Department: </label></td>
 					<td><input type="text" name="dept-modal-field" value=""></td>
 				</tr>
 				
@@ -67,17 +67,17 @@
 				</tr>
 
 				<tr>
-					<td><label for="fname-modal-field">Employee: </label></td>
+					<td><label for="fname-modal-field">First Name: </label></td>
 					<td><input type="text" name="fname-modal-field" value="Melanie"></td>
 				</tr>
 				
 				<tr>
-					<td><label for="lname-modal-field">Model: </label></td>
+					<td><label for="lname-modal-field">Last Name: </label></td>
 					<td><input type="text" name="lname-modal-field" value="Marquez"></td>
 				</tr>
 				
 				<tr>
-					<td><label for="dept-modal-field">Version: </label></td>
+					<td><label for="dept-modal-field">Department: </label></td>
 					<td><input type="text" name="dept-modal-field" value="Dictum???"></td>
 				</tr>
 				

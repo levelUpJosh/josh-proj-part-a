@@ -1,8 +1,248 @@
+<!-- Add Modal -->
+<div class="modal fade" id="callAddModal" tabindex="-1" aria-labelledby="callAddModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="callAddModalLabel">New Call</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Details</h3>
+                <table class="table">
+                    <form method="post">
+                        <tr>
+                            <td>ID:</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="name-field">Priority: </label></td>
+                            <td><select class="form-select " aria-label="Select priority " id="priority-modal-dropdown">
+                                    <option value="High">High</option>
+                                    <option value="Medium">Medium</option>
+                                    <option selected value="Low">Low</option>
+                                </select></td>
+
+                        </tr>
+
+                        <tr>
+                            <td><label for="hw-id-field">Hardware ID* : </label></td>
+                            <td><input type="text" name="hw-id-field" value=""></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="sw-id-field">Software ID (Optional): </label></td>
+                            <td><input type="text" name="sw-id-field" value=""></td>
+                        </tr>
+
+
+                        <tr>
+                            <td><label for="emp-id-field">Employee ID*: </label></td>
+                            <td><input type="text" name="emp-id-field" value=""></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="notes-field">Notes: </label></td>
+                            <td><input type="text" name="notes-field" value="" /></td>
+
+                        </tr>
+                        <tr>
+                            <td><button type="submit" class="btn btn-primary">Save changes</button></td>
+                        </tr>
+                    </form>
+                </table>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Edit Modal -->
+<div class="modal  fade" id="callEditModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="callEditModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="callEditModalLabel">Problem Info</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
+  <hr>
+                <div class="row">
+                    <div class="card col-6">
+                        <div class="card-body">
+                            <table class="table">
+                                <h3 class="card-title">Details</h3>
+                                <form class="card-text" method="post">
+                                    <tr>
+                                        <td>ID:</td>
+                                        <td></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><label for="name-field">Priority: </label></td>
+                                        <td><select class="form-select " aria-label="Select priority " id="priority-modal-dropdown">
+                                                <option value="High">High</option>
+                                                <option value="Medium">Medium</option>
+                                                <option selected value="Low">Low</option>
+                                            </select></td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><label for="hw-id-field">Hardware ID* : </label></td>
+                                        <td><input type="text" name="hw-id-field" value=""></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><label for="sw-id-field">Software ID (Optional): </label></td>
+                                        <td><input type="text" name="sw-id-field" value=""></td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td><label for="emp-id-field">Employee ID*: </label></td>
+                                        <td><input type="text" name="emp-id-field" value=""></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><label for="notes-field">Notes: </label></td>
+                                        <td><textarea type="text" name="notes-field" value="" ></textarea></td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><label for="name-field">Problem Type: </label></td>
+                                        <td><select class="form-select " aria-label="Select priority " id="priority-modal-dropdown">
+                                                <option>Hardware</option>
+                                                <option>Software</option>
+                                                <option>Networking</option>
+                                            </select></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><label for="solved-field">Solved: </label></td>
+                                        <td><select class="form-select " type="text" name="solved-field" value="">
+                                                <option id="unresolved-option" class="bg-danger text-light">Unresolved</option>
+                                                <option id="resolved-option" class="bg-success text-dark">Resolved</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <div id="solution-details-div">
+                                        <tr>
+                                            <td><label for="solution-notes-field">Solution Description:</label></td>
+                                            <td><textarea name="solution-notes-field"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="solution-owner-field">Solved by:</label></td>
+                                            <td><select class="form-select " name="solution-owner-field"></select></td>
+                                        </tr>
+                                    </div>
+                                    <tr>
+                                        <td><button type="submit" class="btn btn-primary">Save changes</button></td>
+                                    </tr>
+                                </form>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row col-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Hardware Affected</h3>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <td scope="col">Hardware ID</td>
+                                            <td scope="col">Manufacturer</td>
+                                            <td scope="col">Model</td>
+                                            <td scope="col">Version</td>
+                                            <td scope="col">Details</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Apple</td>
+                                            <td>Macbook Pro</td>
+                                            <td>15in i7 2019</td>
+                                            <td><button class="btn btn-secondary">View</button>
+                                            <td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Software</h3>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <td scope="col">Call ID</td>
+                                            <td scope="col">Caller Name</td>
+                                            <td scope="col">Caller Name</td>
+                                            <td scope="col">Details</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Example</td>
+                                            <td></td>
+
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Call History</h3>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Call ID</th>
+                                            <th scope="col">Caller Name</th>
+                                            <th scope="col">Caller Name</th>
+                                            <th scope="col">Notes</th>
+                                            <th scope="col">Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Example</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <button class="col-4 btn btn-primary">Add New</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="position-sticky fixed-top row bg-light">
 	<div>
 		<label for="call-search">Enter Search Query: </label>
 		<input type="text" id="call-search" onkeyup="searchTable()" placeholder="Search">
-		<button type="button" class="btn btn-primary col-2 float-right m-3">Add New Call</button>
+		<button type="button" data-bs-toggle="modal" data-bs-target="#callAddModal" class="btn btn-primary col-2 float-right m-3">Add New Call</button>
 	</div>
 
 </div>
@@ -47,7 +287,7 @@
 			<td>3pm</td>
             <td>Hello</td>
             <td>To say hello</td>
-            <td><button class="btn btn-secondary">View Details</button></td>
+            <td><button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#callEditModal">View Details</button></td>
 		</tr>
 	</tbody>
 

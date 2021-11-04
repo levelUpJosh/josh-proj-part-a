@@ -25,28 +25,28 @@
             </button> -->
             <nav id="sideMenu" class="col-md-4 col-lg-2 bg-light sidebar border collapse-horizontal">
 
-                <div class="position-sticky fixed-top w-auto">
+                <div class="position-sticky fixed-top">
                     <ul class="nav flex-column">
                         <!-- Need to work out how best to navigate between panels which are currently accessed through ?content= in the URL -->
                         <h4 class="sidebar-heading text-center align-items-center px-3 mt-3 mb-3 text-muted">Logs</h4>
                         <li class="nav-item btn btn-outline-primary mb-1 <?php if ($dashContent == 'logs/problems') {
                                                                                 echo 'disabled';
-                                                                            }; ?>" onclick="location.replace('/operator-dash?content=logs/problems');">Problems</li>
+                                                                            }; ?>" onclick="location.replace('/<?php echo $userType ?>-dash?content=logs/problems');">Problems</li>
                         <li class="nav-item btn btn-outline-primary mb-1 <?php if ($dashContent == 'logs/calls') {
                                                                                 echo 'disabled';
-                                                                            }; ?>" onclick="location.replace('/operator-dash?content=logs/calls');">Calls</li>
+                                                                            }; ?>" onclick="location.replace('/<?php echo $userType ?>-dash?content=logs/calls');">Calls</li>
 
                         <h4 class="sidebar-heading text-center align-items-center px-3 mt-3 mb-3 text-muted">Databases</h4>
-                        <li onclick="location.replace('/operator-dash?content=databases/emp');" class="nav-item btn btn-outline-primary mb-1 <?php if ($dashContent == 'databases/emp') {
+                        <li onclick="location.replace('/<?php echo $userType ?>-dash?content=databases/emp');" class="nav-item btn btn-outline-primary mb-1 <?php if ($dashContent == 'databases/emp') {
                                                                                                                                                     echo 'disabled';
                                                                                                                                                 }; ?>">Employee</li>
-                        <li onclick="location.replace('/operator-dash?content=databases/hardware');" class="nav-item btn btn-outline-primary mb-1 <?php if ($dashContent == 'databases/hardware') {
+                        <li onclick="location.replace('/<?php echo $userType ?>-dash?content=databases/hardware');" class="nav-item btn btn-outline-primary mb-1 <?php if ($dashContent == 'databases/hardware') {
                                                                                                                                                         echo 'disabled';
                                                                                                                                                     }; ?>">Hardware</li>
-                        <li onclick="location.replace('/operator-dash?content=databases/software');" class="nav-item btn btn-outline-primary mb-1 <?php if ($dashContent == 'databases/software') {
+                        <li onclick="location.replace('/<?php echo $userType ?>-dash?content=databases/software');" class="nav-item btn btn-outline-primary mb-1 <?php if ($dashContent == 'databases/software') {
                                                                                                                                                         echo 'disabled';
                                                                                                                                                     }; ?>">Software</li>
-                        <li onclick="location.replace('/operator-dash?content=databases/specialists');" class="nav-item btn btn-outline-primary mb-1 <?php if ($dashContent == 'databases/specialists') {
+                        <li onclick="location.replace('/<?php echo $userType ?>-dash?content=databases/specialists');" class="nav-item btn btn-outline-primary mb-1 <?php if ($dashContent == 'databases/specialists') {
                                                                                                                                                             echo 'disabled';
                                                                                                                                                         }; ?>">Specialist</li>
                         <br>
@@ -55,8 +55,8 @@
                                 <div class="btn btn-outline-primary col-12">Account Settings</div>
                             </a>
                             <ul class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" onclick="location.replace('/operator-dash?content=user-settings/change-password');">Change Password</a></li>
-                                <li><a class="dropdown-item" onclick="location.replace('/operator-dash?content=user-settings/backups');">Manage Backups</a></li>
+                                <li><a class="dropdown-item" onclick="location.replace('/<?php echo $userType ?>-dash?content=user-settings/change-password');">Change Password</a></li>
+                                <li><a class="dropdown-item" onclick="location.replace('/<?php echo $userType ?>-dash?content=user-settings/backups');">Manage Backups</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>

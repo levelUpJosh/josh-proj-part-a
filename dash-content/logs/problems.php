@@ -122,7 +122,7 @@
                                     <tr>
                                         <td><label for="solved-field">Solved: </label></td>
                                         <td><select class="form-select " type="text" name="solved-field" value="">
-                                                <option id="unresolved-optionclass="bg-danger text-light">Unresolved</option>
+                                                <option id="unresolved-option" class="bg-danger text-light">Unresolved</option>
                                                 <option id="resolved-option" class="bg-success text-dark">Resolved</option>
                                             </select>
                                         </td>
@@ -237,9 +237,14 @@
 
 <div class="position-sticky fixed-top row bg-light">
     <div>
-        <label for="call-search">Enter Search Query: </label>
+        <label for="problem-search">Enter Search Query: </label>
         <input type="text" id="call-search" onkeyup="searchTable()" placeholder="Search">
+        <label for="show-solved-check">Show Solved Problems: </label>
+        <input type="checkbox" onclick="showhideSolved(true)" name="show-solved-check" checked>
+        <label for="show-unsolved-check" >Show Unsolved Problems: </label>
+        <input type="checkbox" onclick="showhideSolved(false)" name="show-unsolved-check" checked>
         <button type="button" class="btn btn-primary col-2 float-right m-3" data-bs-toggle="modal" data-bs-target="#problemAddModal">Add New Problem</button>
+        <button type="button" class="btn btn-primary col-2 float-right m-3" data-bs-toggle="modal" data-bs-target="#problemTypesModal">Edit Problem Types</button>
     </div>
 
 </div>
@@ -269,18 +274,53 @@
     <thead>
         <th scope="col">Problem ID</th>
         <th scope="col">Priority (L/M/H)</th>
+        <th scope="col">Solved?</th>
         <th scope="col">Creation Date</th>
         <th scope="col">Last Modified</th>
         <th scope="col">Hardware ID</th>
         <th scope="col">Software</th>
-        <th scope="col">User ID</th>
+        <th scope="col">Employee ID</th>
         <!--<th scope="col">Notes</th>-->
         <th scope="col">View/Edit</th>
     </thead>
     <tbody>
         <tr>
             <td>1</td>
-            <td>L</td>
+            <td class="priority-id">H</td>
+            <td>No</td>
+            <td>25/07/2021</td>
+            <td>26/07/2021</td>
+            <td><button class="btn btn-outline-primary">1</button></td>
+            <td>Hello</td>
+            <td>To say hello</td>
+            <td><button data-bs-toggle="modal" data-bs-target="#problemEditModal" class="btn btn-secondary">View/Edit</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td class="priority-id">M</td>
+            <td>No</td>
+            <td>25/07/2021</td>
+            <td>26/07/2021</td>
+            <td><button class="btn btn-outline-primary">1</button></td>
+            <td>Hello</td>
+            <td>To say hello</td>
+            <td><button data-bs-toggle="modal" data-bs-target="#problemEditModal" class="btn btn-secondary">View/Edit</button></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td class="priority-id">L</td>
+            <td>No</td>
+            <td>25/07/2021</td>
+            <td>26/07/2021</td>
+            <td><button class="btn btn-outline-primary">1</button></td>
+            <td>Hello</td>
+            <td>To say hello</td>
+            <td><button data-bs-toggle="modal" data-bs-target="#problemEditModal" class="btn btn-secondary">View/Edit</button></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td class="priority-id">L</td>
+            <td>Yes</td>
             <td>25/07/2021</td>
             <td>26/07/2021</td>
             <td><button class="btn btn-outline-primary">1</button></td>
@@ -293,18 +333,59 @@
 </table>
 
 <script>
-    function setPriorityColours() {
+    function showhideSolved(hideSolved) {
+        // True = showhide solved, false = showhide not solved
         // Find the table and all table rows
-        table = document.getElementById("problem-table");
-        tr = table.getElementsByTagName("tr");
-        var priority;
+        tr = $("#problem-table tr");
+        //tr = table.getElementsByTagName("tr");
+        var solved, all_td;
 
         for (row = 0; row < tr.length; row++) {
-            console.log(tr[row]);
-            priority = tr[row].getElementsByTagName("td");
-            console.log(priority);
-            if (priority.textContent == "H") {
-                tr[row].classList.add("bg-danger");
+            //console.log(tr[row]);
+            all_td = tr[row].cells;
+            solved = all_td[2];
+            //console.log(priority);
+            switch (solved.textContent) {
+                case "No":
+                    if (!hideSolved) {
+                        tr[row].classList.toggle("d-none");
+                    }
+                    break;
+                case "Yes":
+                    if (hideSolved) {
+                        tr[row].classList.toggle("d-none");
+                    }
+                    break;
+            }
+        }
+    }
+    
+
+    function setTableColours() {
+        // Find the table and all table rows
+        tr = $("#problem-table tr");
+        //tr = table.getElementsByTagName("tr");
+        var priority, all_td;
+
+        for (row = 0; row < tr.length; row++) {
+            //console.log(tr[row]);
+            all_td = tr[row].cells;
+            priority = all_td[1];
+            solved = all_td[2]
+            //console.log(priority);
+            switch (priority.textContent) {
+                case "H":
+                    tr[row].classList.add("bg-danger");
+                    tr[row].classList.add("text-light");
+                    break;
+                case "M":
+                    tr[row].classList.add("bg-warning");
+                    break;
+            }
+            if (solved.textContent == "Yes") {
+                tr[row].classList.add("bg-success");
+                tr[row].classList.add("text-light");
+                break;
             }
         }
     }
@@ -318,7 +399,7 @@
         // Set the variables
         var input, search, table, tr, td, i, txt, count;
 
-        setPriorityColours();
+
 
         // Find the input text field
         input = document.getElementById("problem-search");
@@ -377,5 +458,6 @@
             }
         }
     }
+    setTableColours();
     searchTable(); //run this so that the table stripes properly
 </script>

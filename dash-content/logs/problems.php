@@ -59,7 +59,7 @@
     </div>
 </div>
 <!-- Edit Modal -->
-<div class="modal  fade" id="problemEditModal" tabindex="-1" aria-labelledby="problemEditModalLabel" aria-hidden="true">
+<div class="modal  fade" id="problemEditModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="problemEditModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
@@ -106,7 +106,7 @@
 
                                     <tr>
                                         <td><label for="notes-field">Notes: </label></td>
-                                        <td><input type="text" name="notes-field" value="" /></td>
+                                        <td><textarea type="text" name="notes-field" value="" ></textarea></td>
 
                                     </tr>
 
@@ -204,10 +204,11 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <td scope="col">Call ID</td>
-                                            <td scope="col">Caller Name</td>
-                                            <td scope="col">Caller Name</td>
-                                            <td scope="col">Details</td>
+                                            <th scope="col">Call ID</th>
+                                            <th scope="col">Caller Name</th>
+                                            <th scope="col">Caller Name</th>
+                                            <th scope="col">Notes</th>
+                                            <th scope="col">Details</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -215,7 +216,7 @@
                                             <td>3</td>
                                             <td>Example</td>
                                             <td></td>
-
+                                            <td></td>
                                             <td></td>
                                         </tr>
                                     </tbody>
@@ -243,8 +244,9 @@
         <input type="checkbox" onclick="showhideSolved(true)" name="show-solved-check" checked>
         <label for="show-unsolved-check" >Show Unsolved Problems: </label>
         <input type="checkbox" onclick="showhideSolved(false)" name="show-unsolved-check" checked>
+        <?php if($userType == "operator"){echo '
         <button type="button" class="btn btn-primary col-2 float-right m-3" data-bs-toggle="modal" data-bs-target="#problemAddModal">Add New Problem</button>
-        <button type="button" class="btn btn-primary col-2 float-right m-3" data-bs-toggle="modal" data-bs-target="#problemTypesModal">Edit Problem Types</button>
+        <button type="button" class="btn btn-primary col-2 float-right m-3" data-bs-toggle="modal" data-bs-target="#problemTypesModal">Edit Problem Types</button>';}?>
     </div>
 
 </div>

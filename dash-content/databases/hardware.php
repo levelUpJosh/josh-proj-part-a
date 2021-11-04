@@ -1,9 +1,9 @@
 <!-- Edit Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="hwEditModal" tabindex="-1" aria-labelledby="hwEditModalLabel" data-bs-backdrop="static" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Hardware Info</h5>
+        <h5 class="modal-title" id="hwEditModalLabel">Hardware Info</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -119,7 +119,7 @@
 			<td>15in i7 2019</td>
 			<td>Yes</td>
             <td>02/2022</td>
-            <td><button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">View Details</button></td>
+            <td><button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#hwEditModal">View Details</button></td>
 		</tr>
         <tr>
 			<td>2</td>

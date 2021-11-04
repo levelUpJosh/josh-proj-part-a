@@ -50,7 +50,7 @@
 </div>
 
 <!-- Edit Modal -->
-<div class="modal fade" id="empModal" tabindex="-1" aria-labelledby="empModalLabel" aria-hidden="true">
+<div class="modal fade" id="empModal" tabindex="-1" aria-labelledby="empModalLabel" data-bs-backdrop="static" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">

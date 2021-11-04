@@ -64,7 +64,7 @@
 	</div>
 </div>
 <!-- Edit Modal -->
-<div class="modal fade" id="swEditModal" tabindex="-1" aria-labelledby="swEditModalLabel" aria-hidden="true">
+<div class="modal fade" id="swEditModal" tabindex="-1" aria-labelledby="swEditModalLabel" aria-hidden="true" data-bs-backdrop="static">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">

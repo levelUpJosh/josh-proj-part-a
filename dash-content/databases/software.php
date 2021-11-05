@@ -203,21 +203,23 @@
 		</tr>
 		<tr>
 			<td>2</td>
-			<td>Apple</td>
-			<td>Macbook Air</td>
-			<td>11in i3 2018</td>
+			<td>Apple Final Cut Pro X</td>
+			<td>01/01/2021</td>
+			<td>01/01/2022</td>
+			<td>AA9-08B-778-90T7</td>
+			<td>macOS</td>
 			<td>No</td>
-			<td></td>
-			<td><button class="btn btn-secondary">View Details</button></td>
+			<td><button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="">View Details</button></td>
 		</tr>
 		<tr>
-			<td>3</td>
-			<td>Microsoft</td>
-			<td>Surface Pro</td>
-			<td>8</td>
+		<td>3</td>
+			<td>Make-It-All Maker</td>
+			<td>01/01/2021</td>
+			<td>01/01/2022</td>
+			<td>AA9-08B-778-90T7</td>
+			<td>Windows</td>
 			<td>Yes</td>
-			<td>10/2024</td>
-			<td><button class="btn btn-secondary">View Details</button></td>
+			<td><button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="">View Details</button></td>
 		</tr>
 	</tbody>
 

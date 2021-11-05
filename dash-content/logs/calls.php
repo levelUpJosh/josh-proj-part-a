@@ -17,33 +17,29 @@
 
 						<tr>
 							<td><label for="name-field">Caller Name: </label></td>
-							<td><input type="text" name="name-field"></td>
+							<td><input type="text" name="name-field" class="col-12"></td>
 
 						</tr>
 
 						<tr>
 							<td><label for="operator-id-field">operator ID* : </label></td>
-							<td><input type="text" name="operator-id-field" value="">Autoassign this field?</td>
+							<td><input type="text" name="operator-id-field" class="col-12" value="">Autoassign this field?</td>
 						</tr>
 
-						<tr>
-							<td><label for="sw-id-field">Software ID (Optional): </label></td>
-							<td><input type="text" name="sw-id-field" value=""></td>
-						</tr>
 
 						<tr>
 							<td><label for="notes-field">Notes: </label></td>
-							<td><input type="text" name="notes-field" value="" /></td>
+							<td><textarea type="text" name="notes-field" class="col-12" value="" rows=10></textarea></td>
 
 						</tr>
 
 						<tr>
 							<td><label for="reason-field">Reason: </label></td>
-							<td><input type="text" name="reason-field" value="" /></td>
+							<td><input type="text" name="reason-field" class="col-12 value="" /></td>
 
 						</tr>
 						<tr>
-							<td><button type="submit" class="btn btn-primary">Save changes</button></td>
+							<td><button type=" submit" class="btn btn-primary">Save changes</button></td>
 						</tr>
 					</form>
 				</table>
@@ -71,99 +67,72 @@
 							<table class="table">
 								<h3 class="card-title">Details</h3>
 								<form class="card-text" method="post">
+
 									<tr>
 										<td>ID:</td>
 										<td></td>
 									</tr>
 
 									<tr>
-										<td><label for="name-field">Priority: </label></td>
-										<td><select class="form-select " aria-label="Select priority " id="priority-modal-dropdown">
-												<option value="High">High</option>
-												<option value="Medium">Medium</option>
-												<option selected value="Low">Low</option>
-											</select></td>
+										<td><label for="name-field">Caller Name: </label></td>
+										<td><input type="text" name="name-field" class="col-12"></td>
 
 									</tr>
 
 									<tr>
-										<td><label for="hw-id-field">Hardware ID* : </label></td>
-										<td><input type="text" name="hw-id-field" value=""></td>
+										<td><label for="operator-id-field">operator ID* : </label></td>
+										<td><input type="text" name="operator-id-field" class="col-12" value="">Autoassign this field?</td>
 									</tr>
 
 									<tr>
-										<td><label for="sw-id-field">Software ID (Optional): </label></td>
-										<td><input type="text" name="sw-id-field" value=""></td>
+										<td><label for="date-field">Date: </label></td>
+										<td><input type="date" name="date-field" class="col-12" value=""></td>
+
 									</tr>
 
-
 									<tr>
-										<td><label for="emp-id-field">Employee ID*: </label></td>
-										<td><input type="text" name="emp-id-field" value=""></td>
+										<td><label for="time-field">Time: </label></td>
+										<td><input type="time" name="time-field" class="col-12" value=""></td>
+
 									</tr>
 
 									<tr>
 										<td><label for="notes-field">Notes: </label></td>
-										<td><textarea type="text" name="notes-field" value=""></textarea></td>
+										<td><textarea type="text" name="notes-field" class="col-12" value="" rows=10></textarea></td>
 
 									</tr>
 
 									<tr>
-										<td><label for="name-field">Problem Type: </label></td>
-										<td><select class="form-select " aria-label="Select priority " id="priority-modal-dropdown">
-												<option>Hardware</option>
-												<option>Software</option>
-												<option>Networking</option>
-											</select></td>
+										<td><label for="reason-field">Reason: </label></td>
+										<td><input type="text" name="reason-field" class="col-12 value="" /></td>
 
-									</tr>
-									<tr>
-										<td><label for="solved-field">Solved: </label></td>
-										<td><select class="form-select " type="text" name="solved-field" value="">
-												<option id="unresolved-option" class="bg-danger text-light">Unresolved</option>
-												<option id="resolved-option" class="bg-success text-dark">Resolved</option>
-											</select>
-										</td>
-									</tr>
-									<div id="solution-details-div">
-										<tr>
-											<td><label for="solution-notes-field">Solution Description:</label></td>
-											<td><textarea name="solution-notes-field"></textarea></td>
-										</tr>
-										<tr>
-											<td><label for="solution-owner-field">Solved by:</label></td>
-											<td><select class="form-select " name="solution-owner-field"></select></td>
-										</tr>
+						</tr>
 									</div>
 									<tr>
-										<td><button type="submit" class="btn btn-primary">Save changes</button></td>
+										<td><button type=" submit" class="btn btn-primary">Save changes</button></td>
 									</tr>
 								</form>
 							</table>
 						</div>
 					</div>
-					<div class="row">
-						<div class="card">
-							<div class="card-body">
-								<h3 class="card-title">Associated Problems</h3>
-								<table class="table">
-									<thead>
-										<tr>
-											<th scope="col">Problem ID</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>3</td>
-										</tr>
-									</tbody>
-								</table>
-								<button class="col-4 btn btn-primary">Add New</button>
-							</div>
+					<div class="card col-6">
+						<div class="card-body">
+							<h3 class="card-title">Associated Problems</h3>
+							<table class="table">
+								<thead>
+									<tr>
+										<th scope="col">Problem ID</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>3</td>
+									</tr>
+								</tbody>
+							</table>
+							<button class="col-4 btn btn-primary">Add New</button>
 						</div>
 					</div>
-
-
 				</div>
 			</div>
 			<div class="modal-footer">

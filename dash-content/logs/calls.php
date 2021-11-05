@@ -25,7 +25,14 @@
 							<td><label for="operator-id-field">operator ID* : </label></td>
 							<td><input type="text" name="operator-id-field" class="col-12" value="">Autoassign this field?</td>
 						</tr>
-
+						<tr>
+							<td><label for="success-edit-field">Call Success? : </label></td>
+							<td><select name="success-edit-field" class="col-12">
+									<option>Received (Employee initiated call)</option>
+									<option>Answered</option>
+									<option>Did not answer</option>
+							</td>
+						</tr>
 
 						<tr>
 							<td><label for="notes-field">Notes: </label></td>
@@ -74,36 +81,45 @@
 									</tr>
 
 									<tr>
-										<td><label for="name-field">Caller Name: </label></td>
+										<td><label for="name-edit-field">Caller Name: </label></td>
 										<td><input type="text" name="name-field" class="col-12"></td>
 
 									</tr>
 
 									<tr>
-										<td><label for="operator-id-field">operator ID* : </label></td>
+										<td><label for="operator-id-edit-field">operator ID* : </label></td>
 										<td><input type="text" name="operator-id-field" class="col-12" value="">Autoassign this field?</td>
 									</tr>
 
 									<tr>
-										<td><label for="date-field">Date: </label></td>
+										<td><label for="success-edit-field">Call Success? : </label></td>
+										<td><select name="success-edit-field" class="col-12">
+												<option>Received (Employee initiated call)</option>
+												<option>Answered</option>
+												<option>Did not answer</option>
+										</td>
+									</tr>
+
+									<tr>
+										<td><label for="date-edit-field">Date: </label></td>
 										<td><input type="date" name="date-field" class="col-12" value=""></td>
 
 									</tr>
 
 									<tr>
-										<td><label for="time-field">Time: </label></td>
+										<td><label for="time-edit-field">Time: </label></td>
 										<td><input type="time" name="time-field" class="col-12" value=""></td>
 
 									</tr>
 
 									<tr>
-										<td><label for="notes-field">Notes: </label></td>
+										<td><label for="notes-edit-field">Notes: </label></td>
 										<td><textarea type="text" name="notes-field" class="col-12" value="" rows=10></textarea></td>
 
 									</tr>
 
 									<tr>
-										<td><label for="reason-field">Reason: </label></td>
+										<td><label for="reason-edit-field">Reason: </label></td>
 										<td><input type="text" name="reason-field" class="col-12 value="" /></td>
 
 						</tr>
@@ -150,7 +166,7 @@
 	</div>
 
 </div>
-<table class="table" id="add-call-table">
+<!-- <table class="table" id="add-call-table">
 	<thead>
 		<th scope="col">Call ID</th>
 		<th scope="col">Caller Name</th>
@@ -170,7 +186,7 @@
 		</tr>
 	</tbody>
 </table>
-
+ -->
 <table class="table" id="call-table">
 	<thead>
 		<th scope="col">Call ID</th>

@@ -1,3 +1,58 @@
+<!-- Add Modal -->
+<div class="modal fade" id="hwAddModal" tabindex="-1" aria-labelledby="hwAddModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="hwAddModalLabel">Hardware Info</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+	  <h3>Details</h3>
+        <table class="table">
+			<form>
+				<tr>
+					<td>ID:</td>
+					<td>1</td>
+				</tr>
+
+				<tr>
+					<td><label for="manufacturer-add-field">Manufacturer: </label></td>
+					<td><input type="text" name="manufacturer-field" value=""></td>
+				</tr>
+				
+				<tr>
+					<td><label for="model-add-field">Model: </label></td>
+					<td><input type="text" name="model-field" value=""></td>
+				</tr>
+				
+				<tr>
+					<td><label for="version-add-field">Version: </label></td>
+					<td><input type="text" name="version-field" value=""></td>
+				</tr>
+				
+				
+				<tr>
+					<td><label for="warranty-add-valid-field">Warranty: </label></td>
+					<td><input type="checkbox"></td>
+				</tr>
+
+				<tr>
+					<td><label for="warranty-add-expiry-field">Expires: </label></td>
+					<td><input type="date" value=""></td>
+				</tr>
+				<tr>
+					<td><button type="button" class="btn btn-primary">Save changes</button></td>
+				</tr>
+			</form>
+		</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Edit Modal -->
 <div class="modal fade" id="hwEditModal" tabindex="-1" aria-labelledby="hwEditModalLabel" data-bs-backdrop="static" aria-hidden="true">
   <div class="modal-dialog">
@@ -16,28 +71,28 @@
 				</tr>
 
 				<tr>
-					<td><label for="manufacturer-field">Manufacturer: </label></td>
+					<td><label for="manufacturer-edit-field">Manufacturer: </label></td>
 					<td><input type="text" name="manufacturer-field" value="Apple"></td>
 				</tr>
 				
 				<tr>
-					<td><label for="model-field">Model: </label></td>
+					<td><label for="model-edit-field">Model: </label></td>
 					<td><input type="text" name="model-field" value="Macbook Pro"></td>
 				</tr>
 				
 				<tr>
-					<td><label for="version-field">Version: </label></td>
+					<td><label for="version-edit-field">Version: </label></td>
 					<td><input type="text" name="version-field" value="15in i7 2019"></td>
 				</tr>
 				
 				
 				<tr>
-					<td><label for="warranty-valid-field">Warranty: </label></td>
+					<td><label for="warranty-edit-valid-field">Warranty: </label></td>
 					<td><input type="checkbox" checked></td>
 				</tr>
 
 				<tr>
-					<td><label for="warranty-expiry-field">Expires: </label></td>
+					<td><label for="warranty-edit-expiry-field">Expires: </label></td>
 					<td><input type="date" value="2022-02-01"></td>
 				</tr>
 				<tr>
@@ -75,11 +130,11 @@
 	<div>
 		<label for="hw-search">Enter Search Query: </label>
 		<input type="text" id="hw-search" onkeyup="searchTable()" placeholder="Search">
-		<button type="button" class="btn btn-primary col-2 float-right m-3">Add New Hardware</button>
+		<button type="button" data-bs-toggle="modal" data-bs-target="#hwAddModal" class="btn btn-primary col-2 float-right m-3">Add New Hardware</button>	
 	</div>
 
 </div>
-<table class="table" id="add-hw-table">
+<!-- <table class="table" id="add-hw-table">
 	<thead>
 		<th scope="col">Hardware ID</th>
 		<th scope="col">Manufacturer</th>
@@ -99,7 +154,7 @@
 		</tr>
 		<td><button>Submit</button></td>
 	</tbody>
-</table>
+</table> -->
 
 <table class="table" id="hw-table">
     <thead>

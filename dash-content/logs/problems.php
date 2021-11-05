@@ -47,6 +47,34 @@
 
                         </tr>
                         <tr>
+                            <td><label for="name-field">Problem Type: </label></td>
+                            <td><select class="form-select " aria-label="Select priority " id="priority-modal-dropdown">
+                                    <option>Hardware</option>
+                                    <option>Software</option>
+                                    <option>Networking</option>
+                                </select></td>
+
+                        </tr>
+                        <tr>
+                            <td><label for="solved-field">Solved: </label></td>
+                            <td><select class="form-select " type="text" name="solved-field" value="">
+                                    <option id="unresolved-option" class="bg-danger text-light">Unresolved</option>
+                                    <option id="resolved-option" class="bg-success text-dark">Resolved</option>
+                                    <option id="resolved-option" class="bg-secondary text-dark">Closed</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <div id="solution-details-div">
+                            <tr>
+                                <td><label for="solution-notes-field">Solution Description:</label></td>
+                                <td><textarea name="solution-notes-field"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><label for="solution-owner-field">Solved by:</label></td>
+                                <td><select class="form-select " name="solution-owner-field"></select></td>
+                            </tr>
+                        </div>
+                        <tr>
                             <td><button type="submit" class="btn btn-primary">Save changes</button></td>
                         </tr>
                     </form>
@@ -106,7 +134,7 @@
 
                                     <tr>
                                         <td><label for="notes-field">Notes: </label></td>
-                                        <td><textarea type="text" name="notes-field" value="" ></textarea></td>
+                                        <td><textarea type="text" name="notes-field" value=""></textarea></td>
 
                                     </tr>
 
@@ -124,6 +152,7 @@
                                         <td><select class="form-select " type="text" name="solved-field" value="">
                                                 <option id="unresolved-option" class="bg-danger text-light">Unresolved</option>
                                                 <option id="resolved-option" class="bg-success text-dark">Resolved</option>
+                                                <option id="resolved-option" class="bg-secondary text-dark">Closed</option>
                                             </select>
                                         </td>
                                     </tr>
@@ -178,9 +207,9 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <td scope="col">Call ID</td>
-                                            <td scope="col">Caller Name</td>
-                                            <td scope="col">Caller Name</td>
+                                            <td scope="col">ID</td>
+                                            <td scope="col">Name</td>
+                                            <td scope="col">Warranty Status</td>
                                             <td scope="col">Details</td>
                                         </tr>
                                     </thead>
@@ -190,7 +219,31 @@
                                             <td>Example</td>
                                             <td></td>
 
+                                            <td><button class="btn btn-secondary">View</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Assigned Specialist</h3>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <td scope="col">ID</td>
+                                            <td scope="col">Name</td>
+                                            <td scope="col">Skillset</td>
+                                            <td scope="col">Details</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>bert</td>
                                             <td></td>
+
+                                            <td><button class="btn btn-secondary">View</button></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -242,11 +295,13 @@
         <input type="text" id="call-search" onkeyup="searchTable()" placeholder="Search">
         <label for="show-solved-check">Show Solved Problems: </label>
         <input type="checkbox" onclick="showhideSolved(true)" name="show-solved-check" checked>
-        <label for="show-unsolved-check" >Show Unsolved Problems: </label>
+        <label for="show-unsolved-check">Show Unsolved Problems: </label>
         <input type="checkbox" onclick="showhideSolved(false)" name="show-unsolved-check" checked>
-        <?php if($userType == "operator"){echo '
+        <?php if ($userType == "operator") {
+            echo '
         <button type="button" class="btn btn-primary col-2 float-right m-3" data-bs-toggle="modal" data-bs-target="#problemAddModal">Add New Problem</button>
-        <button type="button" class="btn btn-primary col-2 float-right m-3" data-bs-toggle="modal" data-bs-target="#problemTypesModal">Edit Problem Types</button>';}?>
+        <button type="button" class="btn btn-primary col-2 float-right m-3" data-bs-toggle="modal" data-bs-target="#problemTypesModal">Edit Problem Types</button>';
+        } ?>
     </div>
 
 </div>
@@ -361,7 +416,7 @@
             }
         }
     }
-    
+
 
     function setTableColours() {
         // Find the table and all table rows

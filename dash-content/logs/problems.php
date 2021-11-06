@@ -1,3 +1,4 @@
+<?php $panel = 'problem' ?>
 <!-- Add Modal -->
 <div class="modal fade" id="problemAddModal" tabindex="-1" aria-labelledby="problemAddModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -42,6 +43,11 @@
                         </tr>
 
                         <tr>
+                            <td><label for="emp-id-field">Specialist ID*: </label></td>
+                            <td><input type="text" name="specialist-id-field" value=""></td>
+                        </tr>
+
+                        <tr>
                             <td><label for="notes-field">Notes: </label></td>
                             <td><input type="text" name="notes-field" value="" /></td>
 
@@ -80,7 +86,8 @@
                     </form>
                 </table>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <?php
+                    checkReturnUrl($userType); ?>
                 </div>
             </div>
         </div>
@@ -118,18 +125,23 @@
 
                                     <tr>
                                         <td><label for="hw-id-field">Hardware ID* : </label></td>
-                                        <td><input type="text" name="hw-id-field" value=""></td>
+                                        <td><input type="text" name="hw-id-field" value="1"></td>
                                     </tr>
 
                                     <tr>
                                         <td><label for="sw-id-field">Software ID (Optional): </label></td>
-                                        <td><input type="text" name="sw-id-field" value=""></td>
+                                        <td><input type="text" name="sw-id-field" value="1"></td>
                                     </tr>
 
 
                                     <tr>
                                         <td><label for="emp-id-field">Employee ID*: </label></td>
-                                        <td><input type="text" name="emp-id-field" value=""></td>
+                                        <td><input type="text" name="emp-id-field" value="1"></td>
+                                        <td><a class="btn btn-secondary" onclick="location.replace('/operator-dash?content=databases/emp&show_modal=Y&return_url=logs/problems')">Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="emp-id-field">Specialist ID*: </label></td>
+                                        <td><input type="text" name="specialist-id-field" value=""></td>
                                     </tr>
 
                                     <tr>
@@ -193,7 +205,7 @@
                                             <td>Apple</td>
                                             <td>Macbook Pro</td>
                                             <td>15in i7 2019</td>
-                                            <td><button class="btn btn-secondary">View</button>
+                                            <td><button class="btn btn-secondary" onclick="location.replace('/operator-dash?content=databases/hardware&show_modal=Y&return_url=logs/problems')">View</button>
                                             <td>
                                         </tr>
                                     </tbody>
@@ -215,11 +227,11 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>3</td>
-                                            <td>Example</td>
-                                            <td></td>
+                                            <td>1</td>
+                                            <td>Microsoft Office 365 Enterprise</td>
+                                            <td>Valid</td>
 
-                                            <td><button class="btn btn-secondary">View</button></td>
+                                            <td><button class="btn btn-secondary" onclick="location.replace('/operator-dash?content=databases/software&show_modal=Y&return_url=logs/problems')">View</button></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -241,9 +253,9 @@
                                         <tr>
                                             <td>1</td>
                                             <td>bert</td>
-                                            <td></td>
+                                            <td>Hardware</td>
 
-                                            <td><button class="btn btn-secondary">View</button></td>
+                                            <td><button class="btn btn-secondary" onclick="location.replace('/operator-dash?content=databases/specialists&show_modal=Y&return_url=logs/problems')">View</button></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -270,11 +282,11 @@
                                             <td>Example</td>
                                             <td></td>
                                             <td></td>
-                                            <td></td>
+                                            <td><button class="btn btn-secondary" onclick="location.replace('/operator-dash?content=logs/calls&show_modal=Y&return_url=logs/problems')">View</button></td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                <button class="col-4 btn btn-primary">Add New</button>
+                                <button class="col-4 btn btn-primary" onclick="location.replace('/operator-dash?content=logs/calls&show_add_modal=Y&return_url=logs/problems')">Add New</button>
                             </div>
                         </div>
                     </div>
@@ -283,7 +295,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <?php
+                checkReturnUrl($userType); ?>
             </div>
         </div>
     </div>
@@ -300,7 +313,7 @@
         <?php if ($userType == "operator") {
             echo '
         <button type="button" class="btn btn-primary col-2 float-right m-3" data-bs-toggle="modal" data-bs-target="#problemAddModal">Add New Problem</button>
-        <button type="button" class="btn btn-primary col-2 float-right m-3" data-bs-toggle="modal" data-bs-target="#problemTypesModal">Edit Problem Types</button>';
+        <button type="button" class="btn btn-primary col-2 float-right m-3" onclick="location.replace(\'/operator-dash?content=edit-problem-types\')">Edit Problem Types</button>';
         } ?>
     </div>
 

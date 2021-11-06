@@ -1,3 +1,4 @@
+<?php $panel = 'call'?>
 <!-- Add Modal -->
 <div class="modal fade" id="callAddModal" tabindex="-1" aria-labelledby="callAddModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
@@ -51,7 +52,8 @@
 					</form>
 				</table>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				<?php
+				checkReturnUrl($userType);?>
 				</div>
 			</div>
 		</div>
@@ -146,13 +148,14 @@
 									</tr>
 								</tbody>
 							</table>
-							<button class="col-4 btn btn-primary">Add New</button>
+							<button class="col-4 btn btn-primary" onclick="location.replace('<?php echo $userType?>-dash?content=logs/problems&show_add_modal=Y&return_url=logs/calls')">Add New</button>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			<?php
+				checkReturnUrl($userType);?>
 			</div>
 		</div>
 	</div>

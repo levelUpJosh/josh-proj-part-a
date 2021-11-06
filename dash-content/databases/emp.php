@@ -1,146 +1,150 @@
+<?php $panel = 'employee' ?>
+
 <!-- Add Modal -->
-<div class="modal fade" id="empAddModal" tabindex="-1" aria-labelledby="empAddModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="empModalLabel">Add Employee Info</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-	  <h3>Details</h3>
-        <table class="table">
-			<form>
-				<tr>
-					<td>ID:</td>
-					<td>1</td>
-				</tr>
+<div class="modal fade" id="employeeAddModal" tabindex="-1" aria-labelledby="employeeAddModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="employeeEditModalLabel">Add Employee Info</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<h3>Details</h3>
+				<table class="table">
+					<form>
+						<tr>
+							<td>ID:</td>
+							<td>1</td>
+						</tr>
 
-				<tr>
-					<td><label for="fname-modal-field">First Name: </label></td>
-					<td><input type="text" name="fname-modal-field" value=""></td>
-				</tr>
-				
-				<tr>
-					<td><label for="lname-modal-field">Last Name: </label></td>
-					<td><input type="text" name="lname-modal-field" value=""></td>
-				</tr>
-				
-				<tr>
-					<td><label for="dept-modal-field">Department: </label></td>
-					<td><input type="text" name="dept-modal-field" value=""></td>
-				</tr>
-				
-				
-				<tr>
-					<td><label for="phone-modal-field">Phone: </label></td>
-					<td><input type="text" name="phone-modal-field" value=""></td>
-				</tr>
+						<tr>
+							<td><label for="fname-modal-field">First Name: </label></td>
+							<td><input type="text" name="fname-modal-field" value=""></td>
+						</tr>
 
-				<tr>
-					<td><button type="button" class="btn btn-primary">Save changes</button></td>
-				</tr>
-			</form>
-		</table>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
+						<tr>
+							<td><label for="lname-modal-field">Last Name: </label></td>
+							<td><input type="text" name="lname-modal-field" value=""></td>
+						</tr>
+
+						<tr>
+							<td><label for="dept-modal-field">Department: </label></td>
+							<td><input type="text" name="dept-modal-field" value=""></td>
+						</tr>
+
+
+						<tr>
+							<td><label for="phone-modal-field">Phone: </label></td>
+							<td><input type="text" name="phone-modal-field" value=""></td>
+						</tr>
+
+						<tr>
+							<td><button type="button" class="btn btn-primary">Save changes</button></td>
+						</tr>
+					</form>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
 </div>
 
 <!-- Edit Modal -->
-<div class="modal fade" id="empModal" tabindex="-1" aria-labelledby="empModalLabel" data-bs-backdrop="static" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="empModalLabel">Employee Info</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-	  <h3>Details</h3>
-        <table class="table">
-			<form>
-				<tr>
-					<td>ID:</td>
-					<td>1</td>
-				</tr>
+<div class="modal fade" id="employeeEditModal" tabindex="-1" aria-labelledby="employeeEditModalLabel" data-bs-backdrop="static" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="employeeEditModalLabel">Employee Info</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<h3>Details</h3>
+				<table class="table">
+					<form>
+						<tr>
+							<td>ID:</td>
+							<td>1</td>
+						</tr>
 
-				<tr>
-					<td><label for="fname-modal-field">First Name: </label></td>
-					<td><input type="text" name="fname-modal-field" value="Melanie"></td>
-				</tr>
-				
-				<tr>
-					<td><label for="lname-modal-field">Last Name: </label></td>
-					<td><input type="text" name="lname-modal-field" value="Marquez"></td>
-				</tr>
-				
-				<tr>
-					<td><label for="dept-modal-field">Department: </label></td>
-					<td><input type="text" name="dept-modal-field" value="Dictum???"></td>
-				</tr>
-				
-				
-				<tr>
-					<td><label for="phone-modal-field">Phone: </label></td>
-					<td><input type="text" name="phone-modal-field" value="(01825) 767371"></td>
-				</tr>
+						<tr>
+							<td><label for="fname-modal-field">First Name: </label></td>
+							<td><input type="text" name="fname-modal-field" value="Melanie"></td>
+						</tr>
 
-				<tr>
-					<td><button type="button" class="btn btn-primary">Save changes</button></td>
-				</tr>
-			</form>
-		</table>
-		<h3>Problem History</h3>
+						<tr>
+							<td><label for="lname-modal-field">Last Name: </label></td>
+							<td><input type="text" name="lname-modal-field" value="Marquez"></td>
+						</tr>
 
-		<table class="table">
-			<thead>
-				<tr>
-					<td scope="col">Problem ID</td>
-					<td scope="col">Notes</td>
-					<td scope="col">Solved?</td>
-					<td scope="col">Details</td>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class="bg-danger text-white">
-					<td>3</td>
-					<td>Example</td>
-					<td>Unsolved</td>
-					<td><button class="btn btn-secondary">Info</button></td>
-				</tr>
-				<tr class="bg-success text-white">
-					<td>4</td>
-					<td>Example2</td>
-					<td>Solved</td>
-					<td><button class="btn btn-secondary">Info</button></td>
-				</tr>
-			</tbody>
-		</table>
+						<tr>
+							<td><label for="dept-modal-field">Department: </label></td>
+							<td><input type="text" name="dept-modal-field" value="Dictum???"></td>
+						</tr>
 
-		<h3>Call History</h3>
 
-		<table class="table">
-			<thead>
-				<tr>
-					<td scope="col">Problem ID</td>
-					<td scope="col">Notes</td>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>3</td>
-					<td>Example</td>
-				</tr>
-			</tbody>
-		</table>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
+						<tr>
+							<td><label for="phone-modal-field">Phone: </label></td>
+							<td><input type="text" name="phone-modal-field" value="(01825) 767371"></td>
+						</tr>
+
+						<tr>
+							<td><button type="button" class="btn btn-primary">Save changes</button></td>
+						</tr>
+					</form>
+				</table>
+				<h3>Problem History</h3>
+
+				<table class="table">
+					<thead>
+						<tr>
+							<td scope="col">Problem ID</td>
+							<td scope="col">Notes</td>
+							<td scope="col">Solved?</td>
+							<td scope="col">Details</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="bg-danger text-white">
+							<td>1</td>
+							<td>Example</td>
+							<td>Unsolved</td>
+							<td><button class="btn btn-secondary" onclick="location.replace('/<?php echo $userType ?>-dash?content=logs/problems&show_modal=Y&return_url=databases/emp')">Info</button></td>
+						</tr>
+						<tr class="bg-success text-white">
+							<td>4</td>
+							<td>Example2</td>
+							<td>Solved</td>
+							<td><button class="btn btn-secondary">Info</button></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h3>Call History</h3>
+
+				<table class="table">
+					<thead>
+						<tr>
+							<td scope="col">Problem ID</td>
+							<td scope="col">Notes</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>3</td>
+							<td>Example</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<?php
+				checkReturnUrl($userType);
+				?>
+			</div>
+		</div>
+	</div>
 </div>
 
 
@@ -150,11 +154,11 @@
 	<div>
 		<label for="emp-search">Enter Search Query: </label>
 		<input type="text" id="emp-search" onkeyup="searchTable()" placeholder="Search">
-		<button type="button" data-bs-toggle="modal" data-bs-target="#empAddModal" class="btn btn-primary col-2 float-right m-3">Add New Employee</button>
+		<button type="button" data-bs-toggle="modal" data-bs-target="#employeeAddModal" class="btn btn-primary col-2 float-right m-3">Add New Employee</button>
 	</div>
 
 </div>
-<table class="table" id="add-emp-table">
+<!-- <table class="table" id="add-emp-table">
 	<thead>
 		<th scope="col">Employee ID</th>
 		<th scope="col">First Name</th>
@@ -172,7 +176,7 @@
 			<td><button>Submit</button></td>
 		</tr>
 	</tbody>
-</table>
+</table> -->
 
 <table class="table" id="emp-table">
 	<thead class="position-sticky">
@@ -190,7 +194,7 @@
 			<td>Marquez</td>
 			<td>Dictum Mi Ac Foundation</td>
 			<td>(01825) 767371</td>
-			<td><button data-bs-toggle="modal" data-bs-target="#empModal" class="btn btn-secondary">Details</button></td>
+			<td><button data-bs-toggle="modal" data-bs-target="#employeeEditModal" class="btn btn-secondary">Details</button></td>
 		</tr>
 		<tr>
 			<td>2</td>

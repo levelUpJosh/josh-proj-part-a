@@ -1,9 +1,11 @@
+
+<?php $panel = 'software'?>
 <!-- Add Modal -->
-<div class="modal fade" id="swAddModal" tabindex="-1" aria-labelledby="swAddModalLabel" aria-hidden="true">
+<div class="modal fade" id="softwareAddModal" tabindex="-1" aria-labelledby="softwareAddModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="swAddModalLabel">Add Software</h5>
+				<h5 class="modal-title" id="softwareAddModalLabel">Add Software</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
@@ -64,11 +66,11 @@
 	</div>
 </div>
 <!-- Edit Modal -->
-<div class="modal fade" id="swEditModal" tabindex="-1" aria-labelledby="swEditModalLabel" aria-hidden="true" data-bs-backdrop="static">
+<div class="modal fade" id="softwareEditModal" tabindex="-1" aria-labelledby="softwareEditModalLabel" aria-hidden="true" data-bs-backdrop="static">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="swEditModalLabel">Software Info</h5>
+				<h5 class="modal-title" id="softwareEditModalLabel">Software Info</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
@@ -140,7 +142,9 @@
 
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			<?php
+				checkReturnUrl($userType);
+				?>
 			</div>
 		</div>
 	</div>
@@ -151,7 +155,7 @@
 	<div>
 		<label for="sw-search">Enter Search Query: </label>
 		<input type="text" id="sw-search" onkeyup="searchTable()" placeholder="Search">
-		<button type="button" data-bs-toggle="modal" data-bs-target="#swAddModal" class="btn btn-primary col-2 float-right m-3">Add New Software</button>
+		<button type="button" data-bs-toggle="modal" data-bs-target="#softwareAddModal" class="btn btn-primary col-2 float-right m-3">Add New Software</button>
 	</div>
 
 </div>
@@ -199,7 +203,7 @@
 			<td>AA9-08B-778-90T7</td>
 			<td>Windows</td>
 			<td>No</td>
-			<td><button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#swEditModal">View Details</button></td>
+			<td><button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#softwareEditModal">View Details</button></td>
 		</tr>
 		<tr>
 			<td>2</td>

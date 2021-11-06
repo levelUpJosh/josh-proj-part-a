@@ -1,0 +1,8 @@
+Hardware
+-Laptops
+-Desktops
+Software
+-Productivity
+-System
+Networking
+-Switches

@@ -159,7 +159,7 @@
 	</div>
 
 </div>
-<table class="table" id="add-sw-table">
+<!-- <table class="table" id="add-sw-table">
 	<thead>
 		<th scope="col">Software ID</th>
 		<th scope="col">Name</th>
@@ -180,7 +180,7 @@
 		</tr>
 		<td><button>Submit</button></td>
 	</tbody>
-</table>
+</table> -->
 
 <table class="table" id="sw-table">
 	<thead>

@@ -209,7 +209,7 @@
 
 <script>
 	if ("<?php echo $userType ?>" != 'operator') {
-		window.location.replace('/errors/404'); // no unauthorised access
+		window.location.assign('/errors/404'); // no unauthorised access
 	}
 
 	function searchTable() {

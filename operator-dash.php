@@ -15,7 +15,7 @@
     function checkReturnUrl($userType) {
         if (isset($_GET["return_url"])) {
             $return_url = $_GET["return_url"];
-            echo '<button type="button" class="btn btn-secondary" onclick="location.replace(\''.$userType.'-dash?content='.$return_url.'&show_modal=Y\');">Return to last page</button>';
+            echo '<button type="button" class="btn btn-secondary" onclick="location.assign(\''.$userType.'-dash?content='.$return_url.'&show_modal=Y\');">Return to last page</button>';
         } else {
             echo '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>';
             }
@@ -40,22 +40,22 @@
                         <h4 class="sidebar-heading text-center align-items-center px-3 mt-3 mb-3 text-muted w-100">Logs</h4>
                         <li class="nav-item btn btn-outline-primary w-100 mb-1 <?php if ($dashContent == 'logs/problems') {
                                                                                     echo 'disabled';
-                                                                                }; ?>" onclick="location.replace('/<?php echo $userType ?>-dash?content=logs/problems');">Problems</li>
+                                                                                }; ?>" onclick="location.assign('/<?php echo $userType ?>-dash?content=logs/problems');">Problems</li>
                         <li class="nav-item btn btn-outline-primary w-100 mb-1 <?php if ($dashContent == 'logs/calls') {
                                                                                     echo 'disabled';
-                                                                                }; ?>" onclick="location.replace('/<?php echo $userType ?>-dash?content=logs/calls');">Calls</li>
+                                                                                }; ?>" onclick="location.assign('/<?php echo $userType ?>-dash?content=logs/calls');">Calls</li>
 
                         <h4 class="sidebar-heading text-center align-items-center px-3 mt-3 mb-3 text-muted w-100">Databases</h4>
-                        <li onclick="location.replace('/<?php echo $userType ?>-dash?content=databases/emp');" class="nav-item btn btn-outline-primary mb-1 w-100 <?php if ($dashContent == 'databases/emp') {
+                        <li onclick="location.assign('/<?php echo $userType ?>-dash?content=databases/emp');" class="nav-item btn btn-outline-primary mb-1 w-100 <?php if ($dashContent == 'databases/emp') {
                                                                                                                                                                         echo 'disabled';
                                                                                                                                                                     }; ?>">Employee</li>
-                        <li onclick="location.replace('/<?php echo $userType ?>-dash?content=databases/hardware');" class="nav-item btn btn-outline-primary mb-1 w-100 <?php if ($dashContent == 'databases/hardware') {
+                        <li onclick="location.assign('/<?php echo $userType ?>-dash?content=databases/hardware');" class="nav-item btn btn-outline-primary mb-1 w-100 <?php if ($dashContent == 'databases/hardware') {
                                                                                                                                                                             echo 'disabled';
                                                                                                                                                                         }; ?>">Hardware</li>
-                        <li onclick="location.replace('/<?php echo $userType ?>-dash?content=databases/software');" class="nav-item btn btn-outline-primary mb-1 w-100 <?php if ($dashContent == 'databases/software') {
+                        <li onclick="location.assign('/<?php echo $userType ?>-dash?content=databases/software');" class="nav-item btn btn-outline-primary mb-1 w-100 <?php if ($dashContent == 'databases/software') {
                                                                                                                                                                             echo 'disabled';
                                                                                                                                                                         }; ?>">Software</li>
-                        <li onclick="location.replace('/<?php echo $userType ?>-dash?content=databases/specialists');" class="nav-item  btn btn-outline-primary mb-1 w-100 <?php if ($dashContent == 'databases/specialists') {
+                        <li onclick="location.assign('/<?php echo $userType ?>-dash?content=databases/specialists');" class="nav-item  btn btn-outline-primary mb-1 w-100 <?php if ($dashContent == 'databases/specialists') {
                                                                                                                                                                                 echo 'disabled';
                                                                                                                                                                             }; ?>">Specialist</li>
                         <br>
@@ -64,8 +64,8 @@
                                 <div class="  col-12">Account Settings</div>
                             </a>
                             <ul class="dropdown-menu col-12" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" onclick="location.replace('/<?php echo $userType ?>-dash?content=user-settings/change-password');">Change Password</a></li>
-                                <li><a class="dropdown-item" onclick="location.replace('/<?php echo $userType ?>-dash?content=user-settings/backups');">Manage Backups</a></li>
+                                <li><a class="dropdown-item" onclick="location.assign('/<?php echo $userType ?>-dash?content=user-settings/change-password');">Change Password</a></li>
+                                <li><a class="dropdown-item" onclick="location.assign('/<?php echo $userType ?>-dash?content=user-settings/backups');">Manage Backups</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>

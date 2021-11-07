@@ -137,7 +137,7 @@
                                     <tr>
                                         <td><label for="emp-id-field">Employee ID*: </label></td>
                                         <td><input type="text" name="emp-id-field" value="1"></td>
-                                        <td><a class="btn btn-secondary" onclick="location.replace('/operator-dash?content=databases/emp&show_modal=Y&return_url=logs/problems')">Details</a></td>
+                                        <td><a class="btn btn-secondary" onclick="location.assign('/operator-dash?content=databases/emp&show_modal=Y&return_url=logs/problems')">Details</a></td>
                                     </tr>
                                     <tr>
                                         <td><label for="emp-id-field">Specialist ID*: </label></td>
@@ -205,7 +205,7 @@
                                             <td>Apple</td>
                                             <td>Macbook Pro</td>
                                             <td>15in i7 2019</td>
-                                            <td><button class="btn btn-secondary" onclick="location.replace('/operator-dash?content=databases/hardware&show_modal=Y&return_url=logs/problems')">View</button>
+                                            <td><button class="btn btn-secondary" onclick="location.assign('/operator-dash?content=databases/hardware&show_modal=Y&return_url=logs/problems')">View</button>
                                             <td>
                                         </tr>
                                     </tbody>
@@ -231,7 +231,7 @@
                                             <td>Microsoft Office 365 Enterprise</td>
                                             <td>Valid</td>
 
-                                            <td><button class="btn btn-secondary" onclick="location.replace('/operator-dash?content=databases/software&show_modal=Y&return_url=logs/problems')">View</button></td>
+                                            <td><button class="btn btn-secondary" onclick="location.assign('/operator-dash?content=databases/software&show_modal=Y&return_url=logs/problems')">View</button></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -255,7 +255,7 @@
                                             <td>bert</td>
                                             <td>Hardware</td>
 
-                                            <td><button class="btn btn-secondary" onclick="location.replace('/operator-dash?content=databases/specialists&show_modal=Y&return_url=logs/problems')">View</button></td>
+                                            <td><button class="btn btn-secondary" onclick="location.assign('/operator-dash?content=databases/specialists&show_modal=Y&return_url=logs/problems')">View</button></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -282,11 +282,11 @@
                                             <td>Example</td>
                                             <td></td>
                                             <td></td>
-                                            <td><button class="btn btn-secondary" onclick="location.replace('/operator-dash?content=logs/calls&show_modal=Y&return_url=logs/problems')">View</button></td>
+                                            <td><button class="btn btn-secondary" onclick="location.assign('/operator-dash?content=logs/calls&show_modal=Y&return_url=logs/problems')">View</button></td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                <button class="col-4 btn btn-primary" onclick="location.replace('/operator-dash?content=logs/calls&show_add_modal=Y&return_url=logs/problems')">Add New</button>
+                                <button class="col-4 btn btn-primary" onclick="location.assign('/operator-dash?content=logs/calls&show_add_modal=Y&return_url=logs/problems')">Add New</button>
                             </div>
                         </div>
                     </div>
@@ -313,7 +313,7 @@
         <?php if ($userType == "operator") {
             echo '
         <button type="button" class="btn btn-primary col-2 float-right m-3" data-bs-toggle="modal" data-bs-target="#problemAddModal">Add New Problem</button>
-        <button type="button" class="btn btn-primary col-2 float-right m-3" onclick="location.replace(\'/operator-dash?content=edit-problem-types\')">Edit Problem Types</button>';
+        <button type="button" class="btn btn-primary col-2 float-right m-3" onclick="location.assign(\'/operator-dash?content=edit-problem-types\')">Edit Problem Types</button>';
         } ?>
     </div>
 

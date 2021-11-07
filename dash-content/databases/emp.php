@@ -110,7 +110,7 @@
 							<td>1</td>
 							<td>Example</td>
 							<td>Unsolved</td>
-							<td><button class="btn btn-secondary" onclick="location.replace('/<?php echo $userType ?>-dash?content=logs/problems&show_modal=Y&return_url=databases/emp')">Info</button></td>
+							<td><button class="btn btn-secondary" onclick="location.assign('/<?php echo $userType ?>-dash?content=logs/problems&show_modal=Y&return_url=databases/emp')">Info</button></td>
 						</tr>
 						<tr class="bg-success text-white">
 							<td>4</td>

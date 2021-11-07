@@ -148,7 +148,7 @@
 									</tr>
 								</tbody>
 							</table>
-							<button class="col-4 btn btn-primary" onclick="location.replace('<?php echo $userType?>-dash?content=logs/problems&show_add_modal=Y&return_url=logs/calls')">Add New</button>
+							<button class="col-4 btn btn-primary" onclick="location.assign('<?php echo $userType?>-dash?content=logs/problems&show_add_modal=Y&return_url=logs/calls')">Add New</button>
 						</div>
 					</div>
 				</div>
